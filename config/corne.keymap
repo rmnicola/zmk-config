@@ -20,13 +20,34 @@
     };
 
     behaviors {
-        Cedilha: Cedilha {
-            compatible = "zmk,behavior-mod-morph";
+        CEDILHA: CEDILHA {
+            compatible = "zmk,behavior-tap-dance";
             label = "CEDILHA";
-            bindings = <&kp C>, <&kp RA(C)>;
-
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            tapping-term-ms = <100>;
+            bindings = <&kp C>, <&kp RA(C)>;
+        };
+
+        SHIFT_GUI: SHIFT_GUI {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_GUI";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_SHIFT>, <&kp LEFT_GUI>;
+        };
+
+        SHIFT_LALT: SHIFT_LALT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_LALT";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&sk LEFT_ALT>;
+        };
+
+        BKSPACE: BKSPACE {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BKSPACE";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
     };
 
@@ -35,10 +56,10 @@
 
         BASE {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E            &kp R      &kp T                      &kp Y                       &kp U      &kp I      &kp O    &kp P     &key_repeat
-&kp TAB     &kp A  &kp S  &kp D            &kp F      &kp G                      &kp H                       &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LCTRL   &kp Z  &kp X  &mt C RA(COMMA)  &kp V      &kp B                      &kp N                       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-                          &to 2            &kp SPACE  &mt LEFT_SHIFT LEFT_WIN    &mt LEFT_ALT LC(BACKSPACE)  &kp SPACE  &to 1
+&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R      &kp T         &kp Y        &kp U      &kp I      &kp O    &kp P     &BKSPACE
+&kp TAB     &kp A  &kp S  &kp D     &kp F      &kp G         &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LCTRL   &kp Z  &kp X  &CEDILHA  &kp V      &kp B         &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                          &to 2     &kp SPACE  &SHIFT_GUI    &SHIFT_LALT  &kp SPACE  &to 1
             >;
         };
 
@@ -61,4 +82,3 @@
         };
     };
 };
-
