@@ -24,7 +24,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CEDILHA";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <250>;
             bindings = <&kp C>, <&kp RA(C)>;
         };
 
@@ -32,21 +32,23 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_GUI";
             #binding-cells = <0>;
+            tapping-term-ms = <250>;
             bindings = <&sk LEFT_SHIFT>, <&kp LEFT_GUI>;
         };
 
-        SHIFT_LALT: SHIFT_LALT {
+        SHIFT_LALT: SHIFT_CTRL {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_LALT";
+            label = "SHIFT_CTRL";
             #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&sk LEFT_ALT>;
+            tapping-term-ms = <250>;
+            bindings = <&sk LSHFT>, <&sk LCTRL>;
         };
 
         BKSPACE: BKSPACE {
             compatible = "zmk,behavior-tap-dance";
             label = "BKSPACE";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <250>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
     };
