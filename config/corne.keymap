@@ -20,8 +20,8 @@
 
         CEDILHA {
             bindings = <&kp RA(COMMA)>;
-            key-positions = <40 27>;
-            timeout-ms = <200>;
+            key-positions = <27 23>;
+            timeout-ms = <300>;
             layers = <0>;
         };
 
@@ -34,7 +34,14 @@
             bindings = <&CRASE>;
             key-positions = <40 13>;
             layers = <0>;
-            timeout-ms = <400>;
+            timeout-ms = <300>;
+        };
+
+        TILDE_ {
+            bindings = <&kp TILDE>;
+            key-positions = <40 23>;
+            timeout-ms = <300>;
+            layers = <0>;
         };
     };
 
@@ -59,7 +66,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ACCENTS";
             #binding-cells = <0>;
-            bindings = <&kp SINGLE_QUOTE>, <&kp TILDE>, <&kp CARET>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp CARET>;
 
             tapping-term-ms = <400>;
         };
