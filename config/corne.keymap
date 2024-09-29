@@ -44,9 +44,14 @@
             layers = <0>;
         };
 
-        JK_BACKSPACE {
-            bindings = <&kp BACKSPACE>;
+        JK_ESC {
+            bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
+        };
+
+        FD_BACKSPACE {
+            bindings = <&kp ESCAPE>;
+            key-positions = <16 15>;
         };
     };
 
