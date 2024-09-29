@@ -24,23 +24,23 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CEDILHA";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp C>, <&kp RA(C)>;
+            tapping-term-ms = <300>;
+            bindings = <&kp C>, <&kp RA(COMMA)>;
         };
 
         SHIFT_GUI: SHIFT_GUI {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_GUI";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
             bindings = <&sk LEFT_SHIFT>, <&kp LEFT_GUI>;
         };
 
-        SHIFT_LALT: SHIFT_CTRL {
+        SHIFT_CTRL: SHIFT_CTRL {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CTRL";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
             bindings = <&sk LSHFT>, <&sk LCTRL>;
         };
 
@@ -48,8 +48,93 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BKSPACE";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
+        };
+
+        A_Accents: A_Accents {
+            compatible = "zmk,behavior-tap-dance";
+            label = "A_ACCENTS";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp A>, <&A_Tilde>, <&A_Caret>;
+        };
+
+        O_Accents: O_Accents {
+            compatible = "zmk,behavior-tap-dance";
+            label = "O_ACCENTS";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp O>, <&O_Tilde>, <&O_Caret>;
+        };
+
+        E_Accents: E_Accents {
+            compatible = "zmk,behavior-tap-dance";
+            label = "E_ACCENTS";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp E>, <&E_Caret>;
+        };
+
+        Period_Exclamation: Period_Exclamation {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PERIOD_EXCLAMATION";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp PERIOD>, <&kp EXCL>;
+        };
+
+        Space_LAlt: Space_LAlt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPACE_LALT";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp SPACE>, <&kp LEFT_ALT>;
+        };
+
+        Space_RAlt: Space_RAlt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPACE_RALT";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp SPACE>, <&kp RIGHT_ALT>;
+        };
+    };
+
+    macros {
+        A_Tilde: A_Tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp A>;
+            label = "A_Tilde";
+        };
+
+        O_Tilde: O_Tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp O>;
+            label = "O_TILDE";
+        };
+
+        A_Caret: A_Caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp A>;
+            label = "A_CARET";
+        };
+
+        E_Caret: E_Caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp E>;
+            label = "E_CARET";
+        };
+
+        O_Caret: O_Caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp O>;
+            label = "O_CARET";
         };
     };
 
@@ -58,29 +143,30 @@
 
         BASE {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R      &kp T         &kp Y        &kp U      &kp I      &kp O    &kp P     &BKSPACE
-&kp TAB     &kp A  &kp S  &kp D     &kp F      &kp G         &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LCTRL   &kp Z  &kp X  &CEDILHA  &kp V      &kp B         &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-                          &to 2     &kp SPACE  &SHIFT_GUI    &SHIFT_LALT  &kp SPACE  &to 1
+&kp ESCAPE  &kp Q       &kp W  &E_Accents  &kp R        &kp T         &kp Y        &kp U        &kp I      &O_Accents           &kp P     &BKSPACE
+&kp TAB     &A_Accents  &kp S  &kp D       &kp F        &kp G         &kp H        &kp J        &kp K      &kp L                &kp SEMI  &kp APOS
+&kp LCTRL   &kp Z       &kp X  &CEDILHA    &kp V        &kp B         &kp N        &kp M        &kp COMMA  &Period_Exclamation  &kp FSLH  &kp RET
+                               &to 2       &Space_LAlt  &SHIFT_GUI    &SHIFT_CTRL  &Space_RAlt  &to 1
             >;
         };
 
         Npad {
             bindings = <
-&trans  &trans  &trans  &kp LBKT   &kp RBKT   &kp GRAVE    &kp N1  &kp N2  &kp N3  &kp MINUS  &trans  &trans
-&trans  &trans  &trans  &kp TILDE  &kp EQUAL  &kp MINUS    &kp N4  &kp N5  &kp N6  &kp PLUS   &trans  &trans
-&trans  &trans  &trans  &kp CARET  &kp BSLH   &kp FSLH     &kp N7  &kp N8  &kp N9  &kp N0     &trans  &trans
-                        &to 2      &trans     &trans       &trans  &trans  &to 0
+&trans  &kp EXCLAMATION  &kp APOS   &kp BACKSLASH         &kp SLASH              &kp MINUS    &kp N7  &kp N8  &kp N9  &kp MINUS  &trans  &trans
+&trans  &kp AMPERSAND    &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp N4  &kp N5  &kp N6  &kp PLUS   &trans  &trans
+&trans  &kp DOLLAR       &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH     &kp N1  &kp N2  &kp N3  &kp N0     &trans  &trans
+                                    &to 2                 &trans                 &trans       &trans  &trans  &to 0
             >;
         };
 
         F_keys {
             bindings = <
-&trans  &kp F1  &kp F2          &kp F3  &kp F4        &kp F5          &kp F6          &kp F7        &kp F8          &kp F9           &kp F10  &trans
-&trans  &trans  &bt BT_CLR      &trans  &trans        &trans          &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F11  &trans
-&trans  &trans  &bt BT_CLR_ALL  &trans  &out OUT_BLE  &out OUT_USB    &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3     &kp F12  &trans
-                                &to 0   &trans        &trans          &trans          &trans        &to 1
+&trans  &kp F1  &kp F2          &kp F3         &kp F4        &kp F5          &kp F6          &kp F7        &kp F8          &kp F9           &kp F10  &trans
+&trans  &none   &bt BT_CLR      &kp PAGE_DOWN  &kp PAGE_UP   &none           &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F11  &trans
+&trans  &none   &bt BT_CLR_ALL  &none          &out OUT_BLE  &out OUT_USB    &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3     &kp F12  &trans
+                                &to 0          &trans        &trans          &trans          &trans        &to 1
             >;
         };
     };
 };
+
