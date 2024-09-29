@@ -29,6 +29,13 @@
             bindings = <&kp DELETE>;
             key-positions = <40 11>;
         };
+
+        CRASE {
+            bindings = <&CRASE>;
+            key-positions = <40 13>;
+            layers = <0>;
+            timeout-ms = <400>;
+        };
     };
 
     behaviors {
@@ -52,11 +59,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ACCENTS";
             #binding-cells = <0>;
-            bindings =
-                <&kp SINGLE_QUOTE>,
-                <&kp TILDE>,
-                <&kp CARET>,
-                <&kp GRAVE>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp TILDE>, <&kp CARET>;
 
             tapping-term-ms = <400>;
         };
@@ -68,6 +71,13 @@
             #binding-cells = <0>;
             bindings = <&kp APOS &kp SPACE>;
             label = "QUOTES";
+        };
+
+        CRASE: CRASE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp A>;
+            label = "CRASE";
         };
     };
 
