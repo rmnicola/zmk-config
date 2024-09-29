@@ -21,6 +21,8 @@
         CEDILHA {
             bindings = <&kp RA(COMMA)>;
             key-positions = <40 27>;
+            timeout-ms = <200>;
+            layers = <0>;
         };
 
         DELETEE {
