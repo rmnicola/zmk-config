@@ -80,6 +80,14 @@
 
             tapping-term-ms = <400>;
         };
+
+        SHIFT_ALT: SHIFT_ALT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_ALT";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&sk LEFT_SHIFT>, <&sk LEFT_ALT>;
+        };
     };
 
     macros {
@@ -103,10 +111,10 @@
 
         BASE {
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E  &kp R            &kp T         &kp Y                &kp U               &kp I      &kp O      &kp P     &kp BACKSPACE
-&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F            &kp G         &kp H                &kp J               &kp K      &kp L      &kp SEMI  &ACCENTS
-&kp LCTRL     &kp Z  &kp X  &kp C  &kp V            &kp B         &kp N                &kp M               &kp COMMA  &DOT_BANG  &kp FSLH  &lt 2 RET
-                            &mo 2  &mt LCTRL SPACE  &SHIFT_GUI    &mt RIGHT_SHIFT RET  &mt LEFT_ALT SPACE  &mo 1
+&kp TAB       &kp Q  &kp W  &kp E  &kp R            &kp T         &kp Y       &kp U               &kp I      &kp O      &kp P     &kp BACKSPACE
+&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F            &kp G         &kp H       &kp J               &kp K      &kp L      &kp SEMI  &ACCENTS
+&kp LCTRL     &kp Z  &kp X  &kp C  &kp V            &kp B         &kp N       &kp M               &kp COMMA  &DOT_BANG  &kp FSLH  &lt 2 RET
+                            &mo 2  &mt LCTRL SPACE  &SHIFT_GUI    &SHIFT_ALT  &mt LEFT_ALT SPACE  &mo 1
             >;
         };
 
