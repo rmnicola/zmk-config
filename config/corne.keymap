@@ -43,6 +43,11 @@
             timeout-ms = <300>;
             layers = <0>;
         };
+
+        JK_BACKSPACE {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <19 20>;
+        };
     };
 
     behaviors {
@@ -93,10 +98,10 @@
 
         BASE {
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E  &kp R            &kp T         &kp Y                   &kp U               &kp I      &kp O      &kp P     &kp BACKSPACE
-&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F            &kp G         &kp H                   &kp J               &kp K      &kp L      &kp SEMI  &ACCENTS
-&kp LCTRL     &kp Z  &kp X  &kp C  &kp V            &kp B         &kp N                   &kp M               &kp COMMA  &DOT_BANG  &kp FSLH  &lt 2 RET
-                            &mo 2  &mt LCTRL SPACE  &SHIFT_GUI    &mt RIGHT_SHIFT RETURN  &mt LEFT_ALT SPACE  &mo 1
+&kp TAB       &kp Q  &kp W  &kp E  &kp R            &kp T         &kp Y                &kp U               &kp I      &kp O      &kp P     &kp BACKSPACE
+&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F            &kp G         &kp H                &kp J               &kp K      &kp L      &kp SEMI  &ACCENTS
+&kp LCTRL     &kp Z  &kp X  &kp C  &kp V            &kp B         &kp N                &kp M               &kp COMMA  &DOT_BANG  &kp FSLH  &lt 2 RET
+                            &mo 2  &mt LCTRL SPACE  &SHIFT_GUI    &mt RIGHT_SHIFT RET  &mt LEFT_ALT SPACE  &mo 1
             >;
         };
 
