@@ -57,6 +57,8 @@
                 <&kp TILDE>,
                 <&kp CARET>,
                 <&kp GRAVE>;
+
+            tapping-term-ms = <400>;
         };
     };
 
