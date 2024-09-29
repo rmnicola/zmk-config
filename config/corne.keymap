@@ -20,7 +20,7 @@
 
         CEDILHA {
             bindings = <&kp RA(COMMA)>;
-            key-positions = <40 32>;
+            key-positions = <40 27>;
         };
 
         DELETEE {
