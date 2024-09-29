@@ -17,6 +17,16 @@
             bindings = <&to 0>;
             key-positions = <36 41>;
         };
+
+        CEDILHA {
+            bindings = <&kp RA(COMMA)>;
+            key-positions = <40 32>;
+        };
+
+        DELETEE {
+            bindings = <&kp DELETE>;
+            key-positions = <40 11>;
+        };
     };
 
     behaviors {
@@ -62,10 +72,10 @@
 
         BASE {
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E  &kp R            &kp T         &kp Y                   &kp U                &kp I      &kp O      &kp P     &kp BACKSPACE
-&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F            &kp G         &kp H                   &kp J                &kp K      &kp L      &kp SEMI  &ACCENTS
-&kp LCTRL     &kp Z  &kp X  &kp C  &kp V            &kp B         &kp N                   &kp M                &kp COMMA  &DOT_BANG  &kp FSLH  &kp RET
-                            &mo 2  &mt LCTRL SPACE  &SHIFT_GUI    &mt RIGHT_SHIFT RETURN  &mt RIGHT_ALT SPACE  &mo 1
+&kp TAB       &kp Q  &kp W  &kp E  &kp R            &kp T         &kp Y                   &kp U               &kp I      &kp O      &kp P     &kp BACKSPACE
+&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F            &kp G         &kp H                   &kp J               &kp K      &kp L      &kp SEMI  &ACCENTS
+&kp LCTRL     &kp Z  &kp X  &kp C  &kp V            &kp B         &kp N                   &kp M               &kp COMMA  &DOT_BANG  &kp FSLH  &kp RET
+                            &mo 2  &mt LCTRL SPACE  &SHIFT_GUI    &mt RIGHT_SHIFT RETURN  &mt LEFT_ALT SPACE  &mo 1
             >;
         };
 
