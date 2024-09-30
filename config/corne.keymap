@@ -27,7 +27,7 @@
 
         CEDILHA {
             bindings = <&kp RA(COMMA)>;
-            key-positions = <23 26>;
+            key-positions = <23 27>;
             layers = <0>;
             timeout-ms = <400>;
         };
