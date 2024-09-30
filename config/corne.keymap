@@ -27,8 +27,9 @@
 
         CEDILHA {
             bindings = <&kp RA(COMMA)>;
-            key-positions = <37 32>;
+            key-positions = <23 26>;
             layers = <0>;
+            timeout-ms = <400>;
         };
 
         DLT {
@@ -68,15 +69,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        TAB_QUOTE: TAB_QUOTE {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TAB_QUOTE";
-            bindings = <&kp TAB>, <&S_QUOTE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RALT|MOD_LALT)>;
-        };
-
         LALT_WIN: LALT_WIN {
             compatible = "zmk,behavior-tap-dance";
             label = "LALT_WIN";
@@ -100,8 +92,8 @@
 
         BASE {
             bindings = <
-&TAB_QUOTE    &kp Q  &kp W  &kp E  &kp R      &kp T                       &kp Y               &kp U                 &kp I      &kp O    &kp P     &AC_CRASE
-&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F      &kp G                       &kp H               &kp J                 &kp K      &kp L    &kp SEMI  &TIL_CIRC
+&kp TAB       &kp Q  &kp W  &kp E  &kp R      &kp T                       &kp Y               &kp U                 &kp I      &kp O    &kp P     &TIL_CIRC
+&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F      &kp G                       &kp H               &kp J                 &kp K      &kp L    &kp SEMI  &AC_CRASE
 &kp LCTRL     &kp Z  &kp X  &kp C  &kp V      &kp B                       &kp N               &kp M                 &kp COMMA  &kp DOT  &kp FSLH  &lt 2 EXCL
                             &mo 1  &LALT_WIN  &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT RET  &SPC_HLD LCTRL SPACE  &mo 2
             >;
@@ -109,10 +101,10 @@
 
         NPAD {
             bindings = <
-&trans  &kp EXCLAMATION  &S_QUOTE   &kp BACKSLASH         &kp SLASH              &kp MINUS    &kp N7  &kp N8  &kp N9  &kp MINUS  &trans  &trans
-&trans  &kp AMPERSAND    &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp N4  &kp N5  &kp N6  &kp PLUS   &trans  &trans
-&trans  &kp DOLLAR       &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH     &kp N1  &kp N2  &kp N3  &kp N0     &trans  &trans
-                                    &trans                &trans                 &trans       &trans  &trans  &mo 3
+&S_QUOTE  &kp EXCLAMATION  &S_QUOTE   &kp BACKSLASH         &kp SLASH              &kp MINUS    &kp N7  &kp N8  &kp N9  &kp MINUS  &trans  &trans
+&trans    &kp AMPERSAND    &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp N4  &kp N5  &kp N6  &kp PLUS   &trans  &trans
+&trans    &kp DOLLAR       &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH     &kp N1  &kp N2  &kp N3  &kp N0     &trans  &trans
+                                      &trans                &trans                 &trans       &trans  &trans  &mo 3
             >;
         };
 
