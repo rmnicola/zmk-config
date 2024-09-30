@@ -18,72 +18,26 @@
             key-positions = <36 41>;
         };
 
-        CEDILHA {
-            bindings = <&kp RA(COMMA)>;
-            key-positions = <27 23>;
-            timeout-ms = <300>;
-            layers = <0>;
-        };
-
-        DELETEE {
-            bindings = <&kp DELETE>;
-            key-positions = <40 11>;
-        };
-
-        CRASE {
-            bindings = <&CRASE>;
-            key-positions = <40 13>;
-            layers = <0>;
-            timeout-ms = <300>;
-        };
-
-        TILDE_ {
-            bindings = <&kp TILDE>;
-            key-positions = <40 23>;
-            timeout-ms = <300>;
-            layers = <0>;
-        };
-
         JK_ESC {
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
         };
 
-        FD_BACKSPACE {
-            bindings = <&kp BACKSPACE>;
+        FD_L1 {
+            bindings = <&sl 1>;
             key-positions = <16 15>;
+        };
+
+        CEDILHA {
+            bindings = <&kp RA(COMMA)>;
+            key-positions = <37 32>;
         };
     };
 
     behaviors {
-        SHIFT_GUI: SHIFT_GUI {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_GUI";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&sk LEFT_SHIFT>, <&sk LEFT_GUI>;
-        };
-
-        DOT_BANG: DOT_BANG {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DOT_BANG";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&kp PERIOD>, <&kp EXCL>;
-        };
-
-        ACCENTS: ACCENTS {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ACCENTS";
-            #binding-cells = <0>;
-            bindings = <&kp SINGLE_QUOTE>, <&kp CARET>;
-
-            tapping-term-ms = <400>;
-        };
-
-        SPACE_HOLD: SPACE_HOLD {
+        SPC_HLD: SPC_HLD {
             compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_HOLD";
+            label = "SPC_HLD";
             bindings = <&sk>, <&kp>;
 
             #binding-cells = <2>;
@@ -91,6 +45,41 @@
             tapping-term-ms = <400>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <200>;
+        };
+
+        AC_CRASE: AC_CRASE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AC_CRASE";
+            bindings = <&kp APOS>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        TIL_CIRC: TIL_CIRC {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TIL_CIRC";
+            bindings = <&kp TILDE>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        TAB_QUOTE: TAB_QUOTE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TAB_QUOTE";
+            bindings = <&kp TAB>, <&S_QUOTE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT|MOD_LALT)>;
+        };
+
+        LALT_WIN: LALT_WIN {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LALT_WIN";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&sk LEFT_ALT>, <&kp LEFT_WIN>;
         };
     };
 
@@ -101,13 +90,6 @@
             bindings = <&kp APOS &kp SPACE>;
             label = "QUOTES";
         };
-
-        CRASE: CRASE {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp A>;
-            label = "CRASE";
-        };
     };
 
     keymap {
@@ -115,28 +97,37 @@
 
         BASE {
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E  &kp R                           &kp T         &kp Y               &kp U                       &kp I      &kp O      &kp P     &kp BACKSPACE
-&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F                           &kp G         &kp H               &kp J                       &kp K      &kp L      &kp SEMI  &ACCENTS
-&kp LCTRL     &kp Z  &kp X  &kp C  &kp V                           &kp B         &kp N               &kp M                       &kp COMMA  &DOT_BANG  &kp FSLH  &lt 2 RET
-                            &mo 2  &SPACE_HOLD LEFT_CONTROL SPACE  &SHIFT_GUI    &mt LEFT_SHIFT RET  &SPACE_HOLD LEFT_ALT SPACE  &mo 1
+&TAB_QUOTE    &kp Q  &kp W  &kp E  &kp R      &kp T                       &kp Y               &kp U                 &kp I      &kp O    &kp P     &AC_CRASE
+&lt 1 ESCAPE  &kp A  &kp S  &kp D  &kp F      &kp G                       &kp H               &kp J                 &kp K      &kp L    &kp SEMI  &TIL_CIRC
+&kp LCTRL     &kp Z  &kp X  &kp C  &kp V      &kp B                       &kp N               &kp M                 &kp COMMA  &kp DOT  &kp FSLH  &lt 2 EXCL
+                            &mo 1  &LALT_WIN  &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT RET  &SPC_HLD LCTRL SPACE  &mo 2
             >;
         };
 
-        Npad {
+        NPAD {
             bindings = <
 &trans  &kp EXCLAMATION  &S_QUOTE   &kp BACKSLASH         &kp SLASH              &kp MINUS    &kp N7  &kp N8  &kp N9  &kp MINUS  &trans  &trans
 &trans  &kp AMPERSAND    &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp N4  &kp N5  &kp N6  &kp PLUS   &trans  &trans
 &trans  &kp DOLLAR       &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH     &kp N1  &kp N2  &kp N3  &kp N0     &trans  &trans
-                                    &trans                &trans                 &trans       &trans  &trans  &trans
+                                    &trans                &trans                 &trans       &trans  &trans  &mo 3
             >;
         };
 
-        F_keys {
+        FKEYS {
             bindings = <
 &trans  &kp F1  &kp F2          &kp F3         &kp F4        &kp F5          &kp F6          &kp F7        &kp F8          &kp F9           &kp F10  &trans
 &trans  &none   &bt BT_CLR      &kp PAGE_DOWN  &kp PAGE_UP   &none           &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F11  &trans
 &trans  &none   &bt BT_CLR_ALL  &none          &out OUT_BLE  &out OUT_USB    &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3     &kp F12  &trans
-                                &trans         &trans        &trans          &trans          &trans        &trans
+                                &mo 3          &trans        &trans          &trans          &trans        &trans
+            >;
+        };
+
+        NROW {
+            bindings = <
+&kp APOS  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS
+&none     &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
+&none     &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
+                          &none   &none   &none     &none   &none   &none
             >;
         };
     };
