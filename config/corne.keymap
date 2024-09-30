@@ -13,24 +13,27 @@
     combos {
         compatible = "zmk,combos";
 
-        BACK_BASE {
-            bindings = <&to 0>;
-            key-positions = <36 41>;
-        };
-
         JK_ESC {
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
+            layers = <0>;
         };
 
         FD_L1 {
             bindings = <&sl 1>;
             key-positions = <16 15>;
+            layers = <0>;
         };
 
         CEDILHA {
             bindings = <&kp RA(COMMA)>;
             key-positions = <37 32>;
+            layers = <0>;
+        };
+
+        DLT {
+            bindings = <&kp DELETE>;
+            key-positions = <38 11>;
         };
     };
 
