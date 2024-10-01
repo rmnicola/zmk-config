@@ -43,25 +43,25 @@
         };
 
         CARET_LEFT {
-            bindings = <&mo 5>;
+            bindings = <&sl 5>;
             key-positions = <38 12>;
             layers = <0>;
         };
 
         CARET_RIGHT {
-            bindings = <&mo 5>;
+            bindings = <&sl 5>;
             key-positions = <39 23>;
             layers = <0>;
         };
 
         CARET_LR {
-            bindings = <&mo 5>;
+            bindings = <&sl 5>;
             key-positions = <23 38>;
             layers = <0>;
         };
 
         CARET_RL {
-            bindings = <&mo 5>;
+            bindings = <&sl 5>;
             key-positions = <39 12>;
             layers = <0>;
         };
