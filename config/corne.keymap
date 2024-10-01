@@ -31,7 +31,7 @@
             layers = <0>;
         };
 
-        M, {
+        ML2 {
             bindings = <&mo 2>;
             key-positions = <31 32>;
             layers = <0>;
