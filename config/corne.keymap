@@ -26,13 +26,13 @@
         };
 
         VC {
-            bindings = <&mo 2>;
+            bindings = <&mo 6>;
             key-positions = <28 27>;
             layers = <0>;
         };
 
         ML2 {
-            bindings = <&mo 2>;
+            bindings = <&mo 6>;
             key-positions = <31 32>;
             layers = <0>;
         };
@@ -40,7 +40,7 @@
         FG {
             bindings = <&mo 4>;
             key-positions = <16 17>;
-            layers = <0 2 1>;
+            layers = <0 6 1>;
         };
 
         DELETEE {
@@ -52,6 +52,30 @@
         DELWORD {
             bindings = <&kp LC(RC(BACKSPACE))>;
             key-positions = <38 39>;
+        };
+
+        CARET_LEFT {
+            bindings = <&mo 5>;
+            key-positions = <38 12>;
+            layers = <0>;
+        };
+
+        CARET_RIGHT {
+            bindings = <&mo 5>;
+            key-positions = <39 23>;
+            layers = <0>;
+        };
+
+        CARET_LR {
+            bindings = <&mo 5>;
+            key-positions = <23 38>;
+            layers = <0>;
+        };
+
+        CARET_RL {
+            bindings = <&mo 5>;
+            key-positions = <39 12>;
+            layers = <0>;
         };
     };
 
@@ -68,31 +92,16 @@
             require-prior-idle-ms = <200>;
         };
 
-        A_ACCENTS: A_ACCENTS {
-            compatible = "zmk,behavior-tap-dance";
-            label = "A_ACCENTS";
-            #binding-cells = <0>;
-            bindings = <&kp RA(A)>, <&ATILDE>, <&ACARET>;
+        TILDE_LAYER: TILDE_LAYER {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TILDE_LAYER";
+            bindings = <&mo>, <&M_QUOTE>;
 
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        E_ACCENTS: E_ACCENTS {
-            compatible = "zmk,behavior-tap-dance";
-            label = "E_ACCENTS";
-            #binding-cells = <0>;
-            bindings = <&kp RA(E)>, <&ECARET>;
-
-            tapping-term-ms = <200>;
-        };
-
-        O_ACCENTS: O_ACCENTS {
-            compatible = "zmk,behavior-tap-dance";
-            label = "O_ACCENTS";
-            #binding-cells = <0>;
-            bindings = <&kp RA(O)>, <&OTILDE>, <&OCARET>;
-
-            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
         };
     };
 
@@ -159,37 +168,55 @@
 
         BASE {
             bindings = <
-&kp TAB     &kp Q                   &kp W                &kp E               &kp R                       &kp T                       &kp Y                     &kp U                   &kp I                &kp O                 &kp P                            &kp MINUS
-&kp ESCAPE  &TAPMOD LEFT_CONTROL A  &TAPMOD LEFT_META S  &TAPMOD LEFT_ALT D  &TAPMOD LEFT_SHIFT F        &kp G                       &kp H                     &TAPMOD LEFT_SHIFT J    &TAPMOD RIGHT_ALT K  &TAPMOD RIGHT_META L  &TAPMOD RIGHT_CONTROL SEMICOLON  &M_QUOTE
-&kp LCTRL   &kp Z                   &kp X                &kp C               &kp V                       &kp B                       &kp N                     &kp M                   &kp COMMA            &kp DOT               &kp FSLH                         &kp RET
-                                                         &lt 1 ESCAPE        &TAPMOD LEFT_CONTROL SPACE  &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT BACKSPACE  &TAPMOD LEFT_ALT SPACE  &lt 2 RETURN
+&lt 3 TAB     &kp Q                   &kp W                &kp E               &kp R                       &kp T                       &kp Y                     &kp U                   &kp I                &kp O                 &kp P                            &lt 3 MINUS
+&lt 4 ESCAPE  &TAPMOD LEFT_CONTROL A  &TAPMOD LEFT_META S  &TAPMOD LEFT_ALT D  &TAPMOD LEFT_SHIFT F        &kp G                       &kp H                     &TAPMOD LEFT_SHIFT J    &TAPMOD RIGHT_ALT K  &TAPMOD RIGHT_META L  &TAPMOD RIGHT_CONTROL SEMICOLON  &TILDE_LAYER 4 0
+&kp LCTRL     &kp Z                   &kp X                &kp C               &kp V                       &kp B                       &kp N                     &kp M                   &kp COMMA            &kp DOT               &kp FSLH                         &kp RET
+                                                           &lt 1 ESCAPE        &TAPMOD LEFT_CONTROL SPACE  &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT BACKSPACE  &TAPMOD LEFT_ALT SPACE  &lt 2 RETURN
             >;
         };
 
-        SYMBOLS {
+        SIMBOLOS {
             bindings = <
 &M_GRAVE  &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp MINUS    &M_CARET              &kp AMPERSAND          &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
 &trans    &kp N1           &kp N2  &kp N3    &kp N4      &kp N5       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN      &kp BACKSLASH          &trans
 &trans    &kp N6           &kp N7  &kp N8    &kp N9      &kp N0       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS       &kp MINUS             &trans                 &kp LS(BACKSLASH)
-                                   &trans    &trans      &trans       &trans                &trans                 &mo 3
+                                   &trans    &trans      &trans       &trans                &trans                 &trans
             >;
         };
 
-        ACCENTS {
-            bindings = <
-&kp GRAVE  &trans      &trans  &E_ACCENTS  &trans  &trans    &trans  &kp RA(U)  &kp RA(I)  &O_ACCENTS  &trans         &trans
-&trans     &A_ACCENTS  &trans  &trans      &trans  &trans    &trans  &trans     &trans     &trans      &kp RA(COMMA)  &trans
-&trans     &trans      &trans  &trans      &trans  &trans    &trans  &trans     &trans     &trans      &trans         &trans
-                               &mo 3       &trans  &trans    &trans  &trans     &trans
-            >;
-        };
-
-        CONTROLS {
+        CONTROLES {
             bindings = <
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7          &kp F8        &kp F9          &kp F10          &kp F11          &kp F12
-&none       &none         &none         &none         &none         &none           &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp K_MUTE       &kp LA(LC(DELETE))
+&none       &none         &none         &kp LA(F4)    &none         &none           &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp K_MUTE       &kp LA(LC(DELETE))
 &bt BT_CLR  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &out OUT_TOG    &kp HOME        &kp PG_UP     &kp PAGE_DOWN   &kp END          &kp PRINTSCREEN  &kp LS(DELETE)
                                         &trans        &trans        &trans          &trans          &trans        &trans
+            >;
+        };
+
+        AGUDO {
+            bindings = <
+&kp GRAVE  &trans     &trans  &kp RA(E)  &trans  &trans    &trans  &kp RA(U)  &kp RA(I)  &kp RA(O)  &trans         &trans
+&trans     &kp RA(A)  &trans  &trans     &trans  &trans    &trans  &trans     &trans     &trans     &kp RA(COMMA)  &trans
+&trans     &trans     &trans  &trans     &trans  &trans    &trans  &trans     &trans     &trans     &trans         &trans
+                              &trans     &trans  &trans    &trans  &trans     &trans
+            >;
+        };
+
+        TIL {
+            bindings = <
+&kp GRAVE  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &OTILDE  &trans         &trans
+&trans     &ATILDE  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp RA(COMMA)  &trans
+&trans     &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans         &trans
+                            &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        CIRCUNFLEXO {
+            bindings = <
+&kp GRAVE  &trans   &trans  &ECARET  &trans  &trans    &trans  &trans  &trans  &OCARET  &trans         &trans
+&trans     &ACARET  &trans  &trans   &trans  &trans    &trans  &trans  &trans  &trans   &kp RA(COMMA)  &trans
+&trans     &trans   &trans  &trans   &trans  &trans    &trans  &trans  &trans  &trans   &trans         &trans
+                            &trans   &trans  &trans    &trans  &trans  &trans
             >;
         };
 
