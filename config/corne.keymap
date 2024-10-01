@@ -162,7 +162,7 @@
 &kp TAB     &kp Q                   &kp W                &kp E               &kp R                       &kp T                       &kp Y                     &kp U                   &kp I                &kp O                 &kp P                            &kp MINUS
 &kp ESCAPE  &TAPMOD LEFT_CONTROL A  &TAPMOD LEFT_META S  &TAPMOD LEFT_ALT D  &TAPMOD LEFT_SHIFT F        &kp G                       &kp H                     &TAPMOD LEFT_SHIFT J    &TAPMOD RIGHT_ALT K  &TAPMOD RIGHT_META L  &TAPMOD RIGHT_CONTROL SEMICOLON  &M_QUOTE
 &kp LCTRL   &kp Z                   &kp X                &kp C               &kp V                       &kp B                       &kp N                     &kp M                   &kp COMMA            &kp DOT               &kp FSLH                         &kp RET
-                                                         &lt 1 RET           &TAPMOD LEFT_CONTROL SPACE  &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT BACKSPACE  &TAPMOD LEFT_ALT SPACE  &lt 2 ESCAPE
+                                                         &lt 1 ESCAPE        &TAPMOD LEFT_CONTROL SPACE  &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT BACKSPACE  &TAPMOD LEFT_ALT SPACE  &lt 2 RETURN
             >;
         };
 
