@@ -25,20 +25,8 @@
             layers = <0>;
         };
 
-        VC {
-            bindings = <&mo 6>;
-            key-positions = <28 27>;
-            layers = <0>;
-        };
-
-        ML2 {
-            bindings = <&mo 6>;
-            key-positions = <31 32>;
-            layers = <0>;
-        };
-
         FG {
-            bindings = <&mo 4>;
+            bindings = <&mo 6>;
             key-positions = <16 17>;
             layers = <0 6 1>;
         };
