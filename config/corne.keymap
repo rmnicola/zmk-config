@@ -74,7 +74,7 @@
             #binding-cells = <0>;
             bindings = <&kp RA(A)>, <&ATILDE>, <&ACARET>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         E_ACCENTS: E_ACCENTS {
@@ -83,7 +83,7 @@
             #binding-cells = <0>;
             bindings = <&kp RA(E)>, <&ECARET>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         O_ACCENTS: O_ACCENTS {
@@ -92,7 +92,7 @@
             #binding-cells = <0>;
             bindings = <&kp RA(O)>, <&OTILDE>, <&OCARET>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
     };
 
