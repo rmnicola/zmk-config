@@ -20,7 +20,7 @@
         };
 
         FD {
-            bindings = <&lt 1 LEFT_META>;
+            bindings = <&lt 1 RET>;
             key-positions = <16 15>;
             layers = <0>;
         };
@@ -42,12 +42,23 @@
             key-positions = <16 17>;
             layers = <0 2 1>;
         };
+
+        DELETEE {
+            bindings = <&kp DELETE>;
+            key-positions = <39 11>;
+            layers = <0>;
+        };
+
+        DELWORD {
+            bindings = <&kp LC(RC(BACKSPACE))>;
+            key-positions = <38 39>;
+        };
     };
 
     behaviors {
-        SPC_HLD: SPC_HLD {
+        TAPMOD: TAPMOD {
             compatible = "zmk,behavior-hold-tap";
-            label = "SPC_HLD";
+            label = "TAPMOD";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -57,31 +68,13 @@
             require-prior-idle-ms = <200>;
         };
 
-        SFT_BK_META: SFT_BK_META {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SFT_BK_META";
-            #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT BACKSPACE>, <&kp LEFT_META>;
-
-            tapping-term-ms = <350>;
-        };
-
-        SFT_BK_RET: SFT_BK_RET {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SFT_BK_RET";
-            #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT BACKSPACE>, <&kp RETURN>;
-
-            tapping-term-ms = <350>;
-        };
-
         A_ACCENTS: A_ACCENTS {
             compatible = "zmk,behavior-tap-dance";
             label = "A_ACCENTS";
             #binding-cells = <0>;
             bindings = <&kp RA(A)>, <&ATILDE>, <&ACARET>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
 
         E_ACCENTS: E_ACCENTS {
@@ -90,7 +83,7 @@
             #binding-cells = <0>;
             bindings = <&kp RA(E)>, <&ECARET>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
 
         O_ACCENTS: O_ACCENTS {
@@ -99,7 +92,7 @@
             #binding-cells = <0>;
             bindings = <&kp RA(O)>, <&OTILDE>, <&OCARET>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
     };
 
@@ -166,10 +159,10 @@
 
         BASE {
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E      &kp R                        &kp T           &kp Y        &kp U                    &kp I         &kp O    &kp P     &kp MINUS
-&kp ESCAPE  &kp A  &kp S  &kp D      &kp F                        &kp G           &kp H        &kp J                    &kp K         &kp L    &kp SEMI  &M_QUOTE
-&kp LCTRL   &kp Z  &kp X  &kp C      &kp V                        &kp B           &kp N        &kp M                    &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSLASH
-                          &lt 1 RET  &SPC_HLD LEFT_CONTROL SPACE  &SFT_BK_META    &SFT_BK_RET  &SPC_HLD LEFT_ALT SPACE  &lt 2 ESCAPE
+&kp TAB     &kp Q                   &kp W                &kp E               &kp R                       &kp T                       &kp Y                     &kp U                   &kp I                &kp O                 &kp P                            &kp MINUS
+&kp ESCAPE  &TAPMOD LEFT_CONTROL A  &TAPMOD LEFT_META S  &TAPMOD LEFT_ALT D  &TAPMOD LEFT_SHIFT F        &kp G                       &kp H                     &TAPMOD LEFT_SHIFT J    &TAPMOD RIGHT_ALT K  &TAPMOD RIGHT_META L  &TAPMOD RIGHT_CONTROL SEMICOLON  &M_QUOTE
+&kp LCTRL   &kp Z                   &kp X                &kp C               &kp V                       &kp B                       &kp N                     &kp M                   &kp COMMA            &kp DOT               &kp FSLH                         &kp RET
+                                                         &lt 1 RET           &TAPMOD LEFT_CONTROL SPACE  &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT BACKSPACE  &TAPMOD LEFT_ALT SPACE  &lt 2 ESCAPE
             >;
         };
 
