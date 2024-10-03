@@ -143,6 +143,10 @@ behaviors {};
 macros {};
 
 behaviors {};
+
+macros {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -151,7 +155,7 @@ keymap {
 &kp ESCAPE  &kp Q                 &kp W                &kp E                    &kp R                  &kp T        &kp Y         &kp U                  &kp I                    &kp O                &kp P                         &kp BACKSPACE
 &kp TAB     &HOMEROW LEFT_META A  &HOMEROW LEFT_ALT S  &HOMEROW LEFT_CONTROL D  &HOMEROW LEFT_SHIFT F  &kp G        &kp H         &HOMEROW LEFT_SHIFT J  &HOMEROW LEFT_CONTROL K  &HOMEROW LEFT_ALT L  &HOMEROW LEFT_META SEMICOLON  &M_QUOTE
 &kp LCTRL   &kp Z                 &kp X                &kp C                    &kp V                  &kp B        &kp N         &kp M                  &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
-                                                       &lt 0 ESCAPE             &lt 0 SPACE            &lt 1 TAB    &lt 2 RETURN  &lt 0 BACKSPACE        &lt 0 DELETE
+                                                       &lt 4 ESCAPE             &lt 3 SPACE            &lt 1 TAB    &lt 2 RETURN  &lt 3 BACKSPACE        &lt 0 DELETE
 >;
         };
 
@@ -170,10 +174,10 @@ keymap {
                                                                  &kp PLUS                        &kp EQUAL                     &kp MINUS      &trans         &trans                  &trans
 >;};ACCENTS {
          bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp GRAVE  &ACARET                   &ECARET                  &trans                       &OCARET                    &trans       &trans     &OCARET                    &trans                       &ECARET                  &ACARET                   &trans
+&trans     &HOMEROW LEFT_META RA(A)  &HOMEROW LEFT_ALT RA(E)  &HOMEROW LEFT_CONTROL RA(I)  &HOMEROW LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(U)  &HOMEROW LEFT_SHIFT RA(O)  &HOMEROW LEFT_CONTROL RA(I)  &HOMEROW LEFT_ALT RA(E)  &HOMEROW LEFT_META RA(A)  &trans
+&trans     &ATILDE                   &trans                   &kp RA(C)                    &OTILDE                    &trans       &trans     &OTILDE                    &kp RA(C)                    &trans                   &ATILDE                   &trans
+                                                              &trans                       &trans                     &trans       &trans     &trans                     &trans
 >;};NAV {
          bindings = <
 &trans  &kp LA(F4)     &kp F11        &kp LC(W)        &kp LC(T)    &kp K_PASTE    &trans  &trans          &trans          &trans        &trans           &trans
