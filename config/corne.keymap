@@ -153,11 +153,11 @@
             >;
         };
 
-        NUM_ALT {
+        SYM {
             bindings = <
 &trans  &kp EXCLAMATION        &kp AT                &kp HASH                  &kp DOLLAR              &kp PERCENT    &kp CARET  &kp AMPS           &kp ASTRK                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans  &homerow LEFT_META N1  &homerow LEFT_ALT N2  &homerow LEFT_CONTROL N3  &homerow LEFT_SHIFT N4  &kp N5         &kp N6     &homerow LSHFT N7  &homerow LEFT_CONTROL N8  &homerow LEFT_ALT N9  &homerow LEFT_META N0  &trans
-&trans  &m_tilde               &m_grave              &kp LBKT                  &kp RBKT                &kp PIPE       &kp BSLH   &kp LBKT           &kp RBKT                  &m_quote              &m_dquotes             &trans
+&trans  &m_tilde               &m_grave              &kp LBKT                  &kp RBKT                &kp PIPE       &kp BSLH   &kp LEFT_BRACE     &kp RIGHT_BRACE           &m_quote              &m_dquotes             &trans
                                                      &kp PLUS                  &kp MINUS               &kp EQUAL      &trans     &trans             &trans
             >;
         };
@@ -175,7 +175,7 @@
             bindings = <
 &trans  &kp LA(F4)     &kp LS(F11)    &kp LC(W)        &kp LC(T)     &kp K_PASTE    &trans  &trans          &trans          &trans        &trans           &trans
 &trans  &kp LEFT_META  &kp LS(LG(S))  &kp LC(LS(TAB))  &kp LC(TAB)   &kp K_COPY     &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &kp BACKSPACE  &kp RET        &kp DOWN         &kp UP_ARROW  &kp LC(X)      &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+&trans  &kp BACKSPACE  &kp LG(E)      &kp DOWN         &kp UP_ARROW  &kp LC(X)      &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
                                       &trans           &trans        &trans         &trans  &trans          &trans
             >;
         };
