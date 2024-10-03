@@ -139,6 +139,10 @@ behaviors {};
 macros {};
 
 behaviors {};
+
+macros {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -164,6 +168,18 @@ keymap {
 &trans  &HOMEROW LEFT_META NUMBER_1  &HOMEROW LEFT_ALT NUMBER_2  &HOMEROW LEFT_CONTROL NUMBER_3  &HOMEROW LEFT_SHIFT NUMBER_4  &kp N5         &kp N6         &HOMEROW LEFT_SHIFT N7  &HOMEROW LEFT_CONTROL N8  &HOMEROW LEFT_ALT N9  &HOMEROW LEFT_META N0  &trans
 &trans  &M_TILDE                     &M_GRAVE                    &kp LEFT_BRACKET                &kp RIGHT_BRACKET             &kp PIPE       &kp BACKSLASH  &kp LEFT_BRACE          &kp RIGHT_BRACE           &M_QUOTE              &M_DQUOTE              &trans
                                                                  &kp PLUS                        &kp EQUAL                     &kp MINUS      &trans         &trans                  &trans
+>;};ACCENTS {
+         bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+>;};NAV {
+         bindings = <
+&trans  &kp LA(F4)     &kp F11        &kp LC(W)        &kp LC(T)    &kp K_PASTE    &trans  &trans          &trans          &trans        &trans           &trans
+&trans  &kp LEFT_META  &kp LG(LS(S))  &kp LC(LS(TAB))  &kp LC(TAB)  &kp K_COPY     &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &kp LC(LA(T))  &kp LG(E)      &kp TAB          &kp ESCAPE   &kp LC(X)      &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+                                      &trans           &trans       &trans         &trans  &trans          &trans
 >;};
     };
 };
