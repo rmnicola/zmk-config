@@ -14,25 +14,21 @@
         esc_num {
             bindings = <&lt 2 ESCAPE>;
             key-positions = <19 20>;
-            layers = <0>;
         };
 
         ret_num {
             bindings = <&lt 2 RET>;
             key-positions = <16 15>;
-            layers = <0>;
         };
 
         acc1 {
-            bindings = <&sl 3>;
+            bindings = <&lt 3 RA(COMMA)>;
             key-positions = <4 5>;
-            layers = <0>;
         };
 
         acc2 {
-            bindings = <&sl 3>;
+            bindings = <&lt 3 RA(COMMA)>;
             key-positions = <6 7>;
-            layers = <0>;
         };
 
         delword {
@@ -164,16 +160,16 @@
 
         ACCENTS {
             bindings = <
-&just_grave  &m_acaret                 &m_ecaret                &trans                       &m_ocaret              &trans       &trans     &m_ocaret             &trans                       &m_ecaret                &m_acaret                 &trans
-&trans       &homerow LEFT_META RA(A)  &homerow LEFT_ALT RA(E)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_SHIFT O  &kp RA(U)    &kp RA(U)  &homerow LSHFT RA(O)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(E)  &homerow LEFT_META RA(A)  &trans
-&trans       &m_atilde                 &trans                   &kp RA(COMMA)                &m_otilde              &trans       &trans     &m_otilde             &kp RA(COMMA)                &m_quote                 &m_atilde                 &trans
-                                                                &trans                       &trans                 &trans       &trans     &trans                &trans
+&just_grave  &m_acaret                 &m_ecaret                &trans                       &m_ocaret                  &trans       &trans     &m_ocaret             &trans                       &m_ecaret                &m_acaret                 &trans
+&trans       &homerow LEFT_META RA(A)  &homerow LEFT_ALT RA(E)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(U)  &homerow LSHFT RA(O)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(E)  &homerow LEFT_META RA(A)  &trans
+&trans       &m_atilde                 &trans                   &kp RA(COMMA)                &m_otilde                  &trans       &trans     &m_otilde             &kp RA(COMMA)                &m_quote                 &m_atilde                 &trans
+                                                                &trans                       &trans                     &trans       &trans     &trans                &trans
             >;
         };
 
         NAV {
             bindings = <
-&trans  &kp LA(F4)     &kp LS(F11)    &kp LC(W)        &kp LC(T)     &kp K_PASTE    &trans  &trans          &trans          &trans        &trans           &trans
+&trans  &kp LA(F4)     &kp F11        &kp LC(W)        &kp LC(T)     &kp K_PASTE    &trans  &trans          &trans          &trans        &trans           &trans
 &trans  &kp LEFT_META  &kp LS(LG(S))  &kp LC(LS(TAB))  &kp LC(TAB)   &kp K_COPY     &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
 &trans  &kp BACKSPACE  &kp LG(E)      &kp DOWN         &kp UP_ARROW  &kp LC(X)      &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
                                       &trans           &trans        &trans         &trans  &trans          &trans
