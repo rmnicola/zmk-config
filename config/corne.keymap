@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
+ * copyright (c) 2020 the zmk contributors
  *
- * SPDX-License-Identifier: MIT
+ * spdx-license-identifier: mit
  */
 
 #include <behaviors.dtsi>
@@ -11,34 +11,34 @@
     combos {
         compatible = "zmk,combos";
 
-        ESC_NUM {
-            bindings = <&lt 2 ESCAPE>;
+        esc_num {
+            bindings = <&lt 2 escape>;
             key-positions = <19 20>;
             layers = <0>;
         };
 
-        RET_NUM {
-            bindings = <&lt 2 RET>;
+        ret_num {
+            bindings = <&lt 2 ret>;
             key-positions = <16 15>;
             layers = <0>;
         };
 
-        FG {
+        fg {
             bindings = <&mo 0>;
             key-positions = <4 5>;
             layers = <0>;
         };
 
-        DELWORD {
-            bindings = <&kp LC(RC(BACKSPACE))>;
+        delword {
+            bindings = <&kp lc(rc(backspace))>;
             key-positions = <40 41>;
         };
     };
 
     behaviors {
-        HOMEROW: HOMEROW {
+        homerow: homerow {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW";
+            label = "homerow";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -46,10 +46,10 @@
             tapping-term-ms = <200>;
         };
 
-        TILDE_LAYER: TILDE_LAYER {
+        tilde_layer: tilde_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "TILDE_LAYER";
-            bindings = <&mo>, <&M_QUOTE>;
+            label = "tilde_layer";
+            bindings = <&mo>, <&m_quote>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -60,130 +60,122 @@
     };
 
     macros {
-        M_QUOTE: QUOTES {
+        m_quote: quotes {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp APOS &kp SPACE>;
-            label = "M_QUOTE", ";
+            bindings = <&kp apos &kp space>;
+            label = "m_quote";
         };
 
-        M_CARET: M_CARET {
+        m_caret: m_caret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CARET &kp SPACE>;
-            label = "M_CARET";
+            bindings = <&kp caret &kp space>;
+            label = "m_caret";
         };
 
-        M_GRAVE: M_GRAVE {
+        m_grave: m_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp SPACE>;
-            label = "M_GRAVE";
+            bindings = <&kp grave &kp space>;
+            label = "m_grave";
         };
 
-        ATILDE: ATILDE {
+        atilde: atilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp TILDE &kp A>;
-            label = "ATILDE";
+            bindings = <&kp tilde &kp a>;
+            label = "atilde";
         };
 
-        ACARET: ACARET {
+        acaret: acaret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CARET &kp A>;
-            label = "ACARET";
+            bindings = <&kp caret &kp a>;
+            label = "acaret";
         };
 
-        ECARET: ECARET {
+        ecaret: ecaret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CARET &kp E>;
-            label = "ECARET";
+            bindings = <&kp caret &kp e>;
+            label = "ecaret";
         };
 
-        OCARET: OCARET {
+        ocaret: ocaret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CARET &kp O>;
-            label = "OCARET";
+            bindings = <&kp caret &kp o>;
+            label = "ocaret";
         };
 
-        OTILDE: OTILDE {
+        otilde: otilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp TILDE &kp O>;
-            label = "OTILDE";
-        };M_TILDE: M_TILDE {
+            bindings = <&kp tilde &kp o>;
+            label = "otilde";
+        };
+        
+        m_tilde: m_tilde {
         compatible = "zmk,behavior-macro";
       
          #binding-cells = <0>;
-         bindings = <&kp TILDE &kp SPACE>;
-         label = "M_TILDE";};M_DQUOTE: M_DQUOTE {
-        compatible = "zmk,behavior-macro";
+         bindings = <&kp tilde &kp space>;
+         label = "m_tilde";
+         };
+
+         m_dquote: m_dquote {
+         compatible = "zmk,behavior-macro";
       
          #binding-cells = <0>;
-         bindings = <&kp DOUBLE_QUOTES &kp SPACE>;
-         label = "M_DQUOTE";};
+         bindings = <&kp double_quotes &kp space>;
+         label = "m_dquote";
+         };
     };
 
-    
-macros {};
-
-behaviors {};
-
-macros {};
-
-behaviors {};
-
-macros {};
-
-behaviors {};
-
-macros {};
-
-behaviors {};
-
-macros {};
-
-behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
-        BASE {
+        base {
             bindings = <
-&kp ESCAPE  &kp Q                 &kp W                &kp E                    &kp R                  &kp T        &kp Y         &kp U                  &kp I                    &kp O                &kp P                         &kp BACKSPACE
-&kp TAB     &HOMEROW LEFT_META A  &HOMEROW LEFT_ALT S  &HOMEROW LEFT_CONTROL D  &HOMEROW LEFT_SHIFT F  &kp G        &kp H         &HOMEROW LEFT_SHIFT J  &HOMEROW LEFT_CONTROL K  &HOMEROW LEFT_ALT L  &HOMEROW LEFT_META SEMICOLON  &M_QUOTE
-&kp LCTRL   &kp Z                 &kp X                &kp C                    &kp V                  &kp B        &kp N         &kp M                  &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
-                                                       &lt 4 ESCAPE             &lt 3 SPACE            &lt 1 TAB    &lt 2 RETURN  &lt 3 BACKSPACE        &lt 0 DELETE
+&kp escape  &kp q                 &kp w                &kp e                    &kp r                  &kp t        &kp y         &kp u                  &kp i                    &kp o                &kp p                         &kp backspace
+&kp tab     &homerow left_meta a  &homerow left_alt s  &homerow left_control d  &homerow left_shift f  &kp g        &kp h         &homerow left_shift j  &homerow left_control k  &homerow left_alt l  &homerow left_meta semicolon  &m_quote
+&kp lctrl   &kp z                 &kp x                &kp c                    &kp v                  &kp b        &kp n         &kp m                  &kp comma                &kp dot              &kp fslh                      &kp ret
+                                                       &lt 4 escape             &lt 3 space            &lt 1 tab    &lt 2 return  &lt 3 backspace        &lt 0 delete
 >;
         };
 
-        NUM {
+        num {
             bindings = <
-&trans  &kp EQUAL           &kp N7                   &kp N8                  &kp N9                        &kp ASTRK    &kp ASTERISK  &kp N7   &kp N8    &kp N9  &kp K_COPY   &trans
-&trans  &HOMEROW LC(X) DOT  &HOMEROW LC(V) NUMBER_4  &HOMEROW LC(N5) LC(N5)  &HOMEROW LEFT_SHIFT NUMBER_6  &kp MINUS    &kp MINUS     &kp N4   &kp N5    &kp N6  &trans       &trans
-&trans  &kp N0              &kp NUMBER_1             &kp N2                  &kp N3                        &kp EQUAL    &kp EQUAL     &kp N1   &kp N2    &kp N3  &kp K_PASTE  &trans
-                                                     &trans                  &trans                        &trans       &kp N0        &kp DOT  &kp BSLH
+&trans  &kp equal           &kp n7                   &kp n8                  &kp n9                        &kp astrk    &kp asterisk  &kp n7   &kp n8    &kp n9  &kp k_copy   &trans
+&trans  &homerow lc(x) dot  &homerow lc(v) number_4  &homerow lc(n5) lc(n5)  &homerow left_shift number_6  &kp minus    &kp minus     &kp n4   &kp n5    &kp n6  &trans       &trans
+&trans  &kp n0              &kp number_1             &kp n2                  &kp n3                        &kp equal    &kp equal     &kp n1   &kp n2    &kp n3  &kp k_paste  &trans
+                                                     &trans                  &trans                        &trans       &kp n0        &kp dot  &kp bslh
 >;
-        };NUM_ALT {
+        };
+        num_alt {
          bindings = <
-&trans  &kp EXCLAMATION              &kp AT                      &kp HASH                        &kp DOLLAR                    &kp PERCENT    &M_CARET       &kp AMPS                &kp ASTRK                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &HOMEROW LEFT_META NUMBER_1  &HOMEROW LEFT_ALT NUMBER_2  &HOMEROW LEFT_CONTROL NUMBER_3  &HOMEROW LEFT_SHIFT NUMBER_4  &kp N5         &kp N6         &HOMEROW LEFT_SHIFT N7  &HOMEROW LEFT_CONTROL N8  &HOMEROW LEFT_ALT N9  &HOMEROW LEFT_META N0  &trans
-&trans  &M_TILDE                     &M_GRAVE                    &kp LEFT_BRACKET                &kp RIGHT_BRACKET             &kp PIPE       &kp BACKSLASH  &kp LEFT_BRACE          &kp RIGHT_BRACE           &M_QUOTE              &M_DQUOTE              &trans
-                                                                 &kp PLUS                        &kp EQUAL                     &kp MINUS      &trans         &trans                  &trans
->;};ACCENTS {
+&trans  &kp exclamation              &kp at                      &kp hash                        &kp dollar                    &kp percent    &m_caret       &kp amps                &kp astrk                 &kp left_parenthesis  &kp right_parenthesis  &trans
+&trans  &homerow left_meta number_1  &homerow left_alt number_2  &homerow left_control number_3  &homerow left_shift number_4  &kp n5         &kp n6         &homerow left_shift n7  &homerow left_control n8  &homerow left_alt n9  &homerow left_meta n0  &trans
+&trans  &m_tilde                     &m_grave                    &kp left_bracket                &kp right_bracket             &kp pipe       &kp backslash  &kp left_brace          &kp right_brace           &m_quote              &m_dquote              &trans
+                                                                 &kp plus                        &kp equal                     &kp minus      &trans         &trans                  &trans
+>;
+        };
+        accents {
          bindings = <
-&kp GRAVE  &ACARET                   &ECARET                  &trans                       &OCARET                    &trans       &trans     &OCARET                    &trans                       &ECARET                  &ACARET                   &trans
-&trans     &HOMEROW LEFT_META RA(A)  &HOMEROW LEFT_ALT RA(E)  &HOMEROW LEFT_CONTROL RA(I)  &HOMEROW LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(U)  &HOMEROW LEFT_SHIFT RA(O)  &HOMEROW LEFT_CONTROL RA(I)  &HOMEROW LEFT_ALT RA(E)  &HOMEROW LEFT_META RA(A)  &trans
-&trans     &ATILDE                   &trans                   &kp RA(C)                    &OTILDE                    &trans       &trans     &OTILDE                    &kp RA(C)                    &trans                   &ATILDE                   &trans
+&kp grave  &acaret                   &ecaret                  &trans                       &ocaret                    &trans       &trans     &ocaret                    &trans                       &ecaret                  &acaret                   &trans
+&trans     &homerow left_meta ra(a)  &homerow left_alt ra(e)  &homerow left_control ra(i)  &homerow left_shift ra(o)  &kp ra(u)    &kp ra(u)  &homerow left_shift ra(o)  &homerow left_control ra(i)  &homerow left_alt ra(e)  &homerow left_meta ra(a)  &trans
+&trans     &atilde                   &trans                   &kp ra(c)                    &otilde                    &trans       &trans     &otilde                    &kp ra(c)                    &trans                   &atilde                   &trans
                                                               &trans                       &trans                     &trans       &trans     &trans                     &trans
->;};NAV {
+>;
+        };
+        nav {
          bindings = <
-&trans  &kp LA(F4)     &kp F11        &kp LC(W)        &kp LC(T)    &kp K_PASTE    &trans  &trans          &trans          &trans        &trans           &trans
-&trans  &kp LEFT_META  &kp LG(LS(S))  &kp LC(LS(TAB))  &kp LC(TAB)  &kp K_COPY     &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &kp LC(LA(T))  &kp LG(E)      &kp TAB          &kp ESCAPE   &kp LC(X)      &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+&trans  &kp la(f4)     &kp f11        &kp lc(w)        &kp lc(t)    &kp k_paste    &trans  &trans          &trans          &trans        &trans           &trans
+&trans  &kp left_meta  &kp lg(ls(s))  &kp lc(ls(tab))  &kp lc(tab)  &kp k_copy     &trans  &kp left_arrow  &kp down_arrow  &kp up_arrow  &kp right_arrow  &trans
+&trans  &kp lc(la(t))  &kp lg(e)      &kp tab          &kp escape   &kp lc(x)      &trans  &kp home        &kp page_down   &kp page_up   &kp end          &trans
                                       &trans           &trans       &trans         &trans  &trans          &trans
->;};
+>;
+        };
     };
 };
