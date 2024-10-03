@@ -24,13 +24,13 @@
         };
 
         acc1 {
-            bindings = <&sl 0>;
+            bindings = <&sl 3>;
             key-positions = <4 5>;
             layers = <0>;
         };
 
         acc2 {
-            bindings = <&sl 0>;
+            bindings = <&sl 3>;
             key-positions = <6 7>;
             layers = <0>;
         };
@@ -50,6 +50,15 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
+        };
+
+        just_grave: just_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JUST_GRAVE";
+            bindings = <&m_grave>, <&m_grave>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -81,6 +90,41 @@
             bindings = <&kp TILDE &kp SPACE>;
             label = "M_TILDE";
         };
+
+        m_atilde: m_atilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp A>;
+            label = "m_atilde";
+        };
+
+        m_acaret: m_acaret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp A>;
+            label = "m_acaret";
+        };
+
+        m_ecaret: m_ecaret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp E>;
+            label = "m_ecaret";
+        };
+
+        m_otilde: m_otilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp O>;
+            label = "m_otilde";
+        };
+
+        m_ocaret: m_ocaret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp O>;
+            label = "m_ocaret";
+        };
     };
 
     keymap {
@@ -88,28 +132,37 @@
 
         BASE {
             bindings = <
-&kp ESC    &kp Q                 &kp W                &kp E                    &kp R                  &kp T        &kp Y      &kp U             &kp I                    &kp O                &kp P                         &kp BSPC
+&kp ESC    &kp Q                 &kp W                &kp E                    &kp R                  &kp T        &kp Y      &kp U             &kp I                    &kp O                &kp P                         &kp MINUS
 &kp TAB    &homerow LEFT_META A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow LEFT_SHIFT F  &kp G        &kp H      &homerow LSHFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT D  &homerow LEFT_META SEMICOLON  &m_quote
 &kp LCTRL  &kp Z                 &kp X                &kp C                    &kp V                  &kp B        &kp N      &kp M             &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
-                                                      &lt 0 ESCAPE             &lt 0 SPACE            &lt 1 TAB    &lt 0 RET  &lt 0 BACKSPACE   &lt 0 DELETE
+                                                      &lt 0 ESCAPE             &lt 3 SPACE            &lt 1 TAB    &lt 2 RET  &lt 3 BACKSPACE   &lt 0 DELETE
             >;
         };
 
         NUM {
             bindings = <
-&kp ESC    &kp EQUAL              &kp N7                      &kp N8                    &kp N9                        &kp ASTRK    &kp ASTERISK  &kp N7                   &kp N8                          &kp N9                      &kp K_COPY              &kp BSPC
-&kp TAB    &homerow LEFT_META N0  &homerow LEFT_ALT NUMBER_4  &homerow LEFT_CONTROL N5  &homerow LEFT_SHIFT NUMBER_6  &kp MINUS    &kp MINUS     &homerow LSHFT NUMBER_1  &homerow LEFT_CONTROL NUMBER_2  &homerow LEFT_ALT NUMBER_3  &homerow LEFT_META DOT  &m_quote
-&kp LCTRL  &kp N0                 &kp N1                      &kp N2                    &kp N3                        &kp EQUAL    &kp EQUAL     &kp N1                   &kp N2                          &kp N3                      &kp K_PASTE             &kp RET
-                                                              &lt 0 ESCAPE              &lt 0 SPACE                   &lt 0 TAB    &kp N0        &kp DOT                  &kp BACKSLASH
+&trans  &kp EQUAL              &kp N7                      &kp N8                    &kp N9                        &kp ASTRK    &kp ASTERISK  &kp N7                   &kp N8                          &kp N9                      &kp K_COPY              &trans
+&trans  &homerow LEFT_META N0  &homerow LEFT_ALT NUMBER_4  &homerow LEFT_CONTROL N5  &homerow LEFT_SHIFT NUMBER_6  &kp MINUS    &kp MINUS     &homerow LSHFT NUMBER_1  &homerow LEFT_CONTROL NUMBER_2  &homerow LEFT_ALT NUMBER_3  &homerow LEFT_META DOT  &trans
+&trans  &kp N0                 &kp N1                      &kp N2                    &kp N3                        &kp EQUAL    &kp EQUAL     &kp N1                   &kp N2                          &kp N3                      &kp K_PASTE             &trans
+                                                           &lt 0 ESCAPE              &lt 0 SPACE                   &lt 0 TAB    &kp N0        &kp DOT                  &kp BACKSLASH
             >;
         };
 
         NUM_ALT {
             bindings = <
-&kp ESC    &kp EXCLAMATION        &kp AT                &kp HASH                  &kp DOLLAR              &kp PERCENT    &kp CARET  &kp AMPS           &kp ASTRK                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
-&kp TAB    &homerow LEFT_META N1  &homerow LEFT_ALT N2  &homerow LEFT_CONTROL N3  &homerow LEFT_SHIFT N4  &kp N5         &kp N6     &homerow LSHFT N7  &homerow LEFT_CONTROL N8  &homerow LEFT_ALT N9  &homerow LEFT_META N0  &m_quote
-&kp LCTRL  &m_tilde               &m_grave              &kp LBKT                  &kp RBKT                &kp PIPE       &kp BSLH   &kp LBKT           &kp RBKT                  &m_quote              &m_dquotes             &kp RET
-                                                        &kp EQUAL                 &kp MINUS               &kp EQUAL      &trans     &trans             &trans
+&trans  &kp EXCLAMATION        &kp AT                &kp HASH                  &kp DOLLAR              &kp PERCENT    &kp CARET  &kp AMPS           &kp ASTRK                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &homerow LEFT_META N1  &homerow LEFT_ALT N2  &homerow LEFT_CONTROL N3  &homerow LEFT_SHIFT N4  &kp N5         &kp N6     &homerow LSHFT N7  &homerow LEFT_CONTROL N8  &homerow LEFT_ALT N9  &homerow LEFT_META N0  &trans
+&trans  &m_tilde               &m_grave              &kp LBKT                  &kp RBKT                &kp PIPE       &kp BSLH   &kp LBKT           &kp RBKT                  &m_quote              &m_dquotes             &trans
+                                                     &kp PLUS                  &kp MINUS               &kp EQUAL      &trans     &trans             &trans
+            >;
+        };
+
+        ACCENTS {
+            bindings = <
+&just_grave  &m_acaret                 &m_ecaret                &trans                       &m_ocaret              &trans       &trans     &m_ocaret             &trans                       &m_ecaret                &m_acaret                 &trans
+&trans       &homerow LEFT_META RA(A)  &homerow LEFT_ALT RA(E)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_SHIFT O  &kp RA(U)    &kp RA(U)  &homerow LSHFT RA(O)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(E)  &homerow LEFT_META RA(A)  &trans
+&trans       &m_atilde                 &trans                   &kp RA(COMMA)                &m_otilde              &trans       &trans     &m_otilde             &kp RA(COMMA)                &m_quote                 &m_atilde                 &trans
+                                                                &trans                       &trans                 &trans       &trans     &trans                &trans
             >;
         };
     };
