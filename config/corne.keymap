@@ -11,21 +11,21 @@
     combos {
         compatible = "zmk,combos";
 
-        JK {
-            bindings = <&lt 0 ESCAPE>;
+        ESC_NUM {
+            bindings = <&lt 2 ESCAPE>;
             key-positions = <19 20>;
             layers = <0>;
         };
 
-        FD {
-            bindings = <&lt 0 RET>;
+        RET_NUM {
+            bindings = <&lt 2 RET>;
             key-positions = <16 15>;
             layers = <0>;
         };
 
         FG {
             bindings = <&mo 0>;
-            key-positions = <16 17>;
+            key-positions = <4 5>;
             layers = <0>;
         };
 
@@ -128,6 +128,10 @@
     };
 
     
+macros {};
+
+behaviors {};
+
 macros {};
 
 behaviors {};
