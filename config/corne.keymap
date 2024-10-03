@@ -64,7 +64,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp APOS &kp SPACE>;
-            label = "' ", ";
+            label = "M_QUOTE", ";
         };
 
         M_CARET: M_CARET {
