@@ -122,8 +122,15 @@
         m_crase: m_crase {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_SHIFT &kp GRAVE &kt LSHFT &kp A>;
+            bindings = <&kt RIGHT_ALT &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_4 &kt RIGHT_ALT>;
             label = "M_CRASE";
+        };
+
+        m_crase_upper: m_crase_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt RIGHT_ALT &kp NUMBER_1 &kp N9 &kp NUMBER_2 &kt RIGHT_ALT>;
+            label = "M_CRASE_UPPER";
         };
     };
 
@@ -159,10 +166,10 @@
 
         ACCENTS {
             bindings = <
-&m_crase  &m_acaret                 &m_ecaret                &trans                       &m_ocaret                  &trans       &trans     &m_ocaret             &trans                       &m_ecaret                &m_acaret                 &trans
-&trans    &homerow LEFT_META RA(A)  &homerow LEFT_ALT RA(E)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(U)  &homerow LSHFT RA(O)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(E)  &homerow LEFT_META RA(A)  &trans
-&trans    &m_atilde                 &trans                   &kp RA(COMMA)                &m_otilde                  &trans       &trans     &m_otilde             &kp RA(COMMA)                &m_quote                 &m_atilde                 &trans
-                                                             &trans                       &trans                     &trans       &trans     &trans                &trans
+&m_crase        &m_acaret                 &m_ecaret                &trans                       &m_ocaret                  &trans       &trans     &m_ocaret             &trans                       &m_ecaret                &m_acaret                 &trans
+&m_crase_upper  &homerow LEFT_META RA(A)  &homerow LEFT_ALT RA(E)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(U)  &homerow LSHFT RA(O)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(E)  &homerow LEFT_META RA(A)  &trans
+&trans          &m_atilde                 &trans                   &kp RA(COMMA)                &m_otilde                  &trans       &trans     &m_otilde             &kp RA(COMMA)                &m_quote                 &m_atilde                 &trans
+                                                                   &trans                       &trans                     &trans       &trans     &trans                &trans
             >;
         };
 
