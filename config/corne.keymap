@@ -5,8 +5,9 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     combos {
@@ -34,12 +35,17 @@
 
         delword {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <40 41>;
+            key-positions = <41 38>;
         };
 
         shiftword {
-            bindings = <&caps_word>;
+            bindings = <&kp LEFT_SHIFT>;
             key-positions = <38 39>;
+        };
+
+        l6 {
+            bindings = <&mo 6>;
+            key-positions = <36 41>;
         };
     };
 
@@ -52,6 +58,15 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
+        };
+
+        a_crase: a_crase {
+            compatible = "zmk,behavior-mod-morph";
+            label = "A_CRASE";
+            bindings = <&m_crase>, <&m_crase_upper>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -122,15 +137,22 @@
         m_crase: m_crase {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RIGHT_ALT &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_4 &kt RIGHT_ALT>;
+            bindings = <&kp GRAVE &kp A>;
             label = "M_CRASE";
         };
 
         m_crase_upper: m_crase_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RIGHT_ALT &kp NUMBER_1 &kp N9 &kp NUMBER_2 &kt RIGHT_ALT>;
+            bindings = <&kp GRAVE &kp LS(A)>;
             label = "M_CRASE_UPPER";
+        };
+
+        m_caret: m_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp SPACE>;
+            label = "M_CARET";
         };
     };
 
@@ -157,19 +179,19 @@
 
         SYM {
             bindings = <
-&trans  &kp EXCLAMATION        &kp AT                &kp HASH                  &kp DOLLAR              &kp PERCENT    &kp CARET  &kp AMPS           &kp ASTRK                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &homerow LEFT_META N1  &homerow LEFT_ALT N2  &homerow LEFT_CONTROL N3  &homerow LEFT_SHIFT N4  &kp N5         &kp N6     &homerow LSHFT N7  &homerow LEFT_CONTROL N8  &homerow LEFT_ALT N9  &homerow LEFT_META N0  &trans
-&trans  &m_tilde               &m_grave              &kp LBKT                  &kp RBKT                &kp PIPE       &kp BSLH   &kp LEFT_BRACE     &kp RIGHT_BRACE           &m_quote              &m_dquotes             &trans
-                                                     &kp PLUS                  &kp MINUS               &kp EQUAL      &trans     &trans             &trans
+&trans  &kp N1                   &kp N2                &kp N3                          &kp N4                      &kp N5         &kp N6    &kp N7               &kp N8                       &kp N9                              &kp N0                                &kp BACKSPACE
+&trans  &homerow LEFT_META EXCL  &homerow LEFT_ALT AT  &homerow LEFT_CONTROL LA(HASH)  &homerow LEFT_SHIFT DOLLAR  &kp PERCENT    &m_caret  &homerow LSHFT AMPS  &homerow LEFT_CONTROL ASTRK  &homerow LEFT_ALT LEFT_PARENTHESIS  &homerow LEFT_META RIGHT_PARENTHESIS  &trans
+&trans  &m_tilde                 &m_grave              &kp LBKT                        &kp RBKT                    &kp PIPE       &kp BSLH  &kp LEFT_BRACE       &kp RIGHT_BRACE              &m_quote                            &m_dquotes                            &trans
+                                                       &kp PLUS                        &kp MINUS                   &kp EQUAL      &trans    &trans               &trans
             >;
         };
 
         ACCENTS {
             bindings = <
-&m_crase        &m_acaret                 &m_ecaret                &trans                       &m_ocaret                  &trans       &trans     &m_ocaret             &trans                       &m_ecaret                &m_acaret                 &trans
-&m_crase_upper  &homerow LEFT_META RA(A)  &homerow LEFT_ALT RA(E)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(U)  &homerow LSHFT RA(O)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(E)  &homerow LEFT_META RA(A)  &trans
-&trans          &m_atilde                 &trans                   &kp RA(COMMA)                &m_otilde                  &trans       &trans     &m_otilde             &kp RA(COMMA)                &m_quote                 &m_atilde                 &trans
-                                                                   &trans                       &trans                     &trans       &trans     &trans                &trans
+&a_crase  &m_acaret                 &m_ecaret                &trans                       &m_ocaret                  &trans       &trans     &m_ocaret             &trans                       &m_ecaret                &m_acaret                 &trans
+&trans    &homerow LEFT_META RA(A)  &homerow LEFT_ALT RA(E)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(U)  &homerow LSHFT RA(O)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(E)  &homerow LEFT_META RA(A)  &trans
+&trans    &m_atilde                 &trans                   &kp RA(COMMA)                &m_otilde                  &trans       &trans     &m_otilde             &kp RA(COMMA)                &m_quote                 &m_atilde                 &trans
+                                                             &trans                       &trans                     &trans       &trans     &trans                &trans
             >;
         };
 
@@ -188,6 +210,15 @@
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
 &trans  &kp F12  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &trans  &trans     &trans     &trans    &trans    &trans
                          &trans  &trans  &trans             &trans  &trans     &trans
+            >;
+        };
+
+        BT {
+            bindings = <
+&bt BT_CLR  &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
+&none       &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &out OUT_TOG    &none  &none  &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
+                                        &none         &none         &none           &none  &none  &none
             >;
         };
     };
