@@ -39,7 +39,7 @@
         };
 
         shiftword {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&caps_word>;
             key-positions = <38 39>;
         };
 
