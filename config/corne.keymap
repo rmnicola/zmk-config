@@ -179,10 +179,10 @@
 
         SYM {
             bindings = <
-&trans  &kp N1                   &kp N2                &kp N3                          &kp N4                      &kp N5         &kp N6    &kp N7               &kp N8                       &kp N9                              &kp N0                                &kp BACKSPACE
-&trans  &homerow LEFT_META EXCL  &homerow LEFT_ALT AT  &homerow LEFT_CONTROL LA(HASH)  &homerow LEFT_SHIFT DOLLAR  &kp PERCENT    &m_caret  &homerow LSHFT AMPS  &homerow LEFT_CONTROL ASTRK  &homerow LEFT_ALT LEFT_PARENTHESIS  &homerow LEFT_META RIGHT_PARENTHESIS  &trans
-&trans  &m_tilde                 &m_grave              &kp LBKT                        &kp RBKT                    &kp PIPE       &kp BSLH  &kp LEFT_BRACE       &kp RIGHT_BRACE              &m_quote                            &m_dquotes                            &trans
-                                                       &kp PLUS                        &kp MINUS                   &kp EQUAL      &trans    &trans               &trans
+&trans  &kp N1                   &kp N2                &kp N3                      &kp N4                      &kp N5         &kp N6    &kp N7               &kp N8                       &kp N9                              &kp N0                                &kp BACKSPACE
+&trans  &homerow LEFT_META EXCL  &homerow LEFT_ALT AT  &homerow LEFT_CONTROL HASH  &homerow LEFT_SHIFT DOLLAR  &kp PERCENT    &m_caret  &homerow LSHFT AMPS  &homerow LEFT_CONTROL ASTRK  &homerow LEFT_ALT LEFT_PARENTHESIS  &homerow LEFT_META RIGHT_PARENTHESIS  &trans
+&trans  &m_tilde                 &m_grave              &kp LBKT                    &kp RBKT                    &kp PIPE       &kp BSLH  &kp LEFT_BRACE       &kp RIGHT_BRACE              &m_quote                            &m_dquotes                            &trans
+                                                       &kp PLUS                    &kp MINUS                   &kp EQUAL      &trans    &trans               &trans
             >;
         };
 
