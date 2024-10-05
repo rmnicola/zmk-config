@@ -68,6 +68,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        a_accent: a_accent {
+            compatible = "zmk,behavior-tap-dance";
+            label = "A_ACCENT";
+            #binding-cells = <0>;
+            bindings = <&kp RA(A)>, <&a_crase>;
+        };
     };
 
     macros {
@@ -161,10 +168,10 @@
 
         BASE {
             bindings = <
-&kp ESCAPE  &kp Q                 &kp W                &kp E                    &kp R                  &kp T              &kp Y      &kp U             &kp I                    &kp O                &kp P                         &kp MINUS
-&kp TAB     &homerow LEFT_META A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow LEFT_SHIFT F  &kp G              &kp H      &homerow LSHFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_META SEMICOLON  &m_quote
-&kp LCTRL   &kp Z                 &kp X                &kp C                    &kp V                  &kp B              &kp N      &kp M             &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
-                                                       &lt 4 ESCAPE             &lt 3 SPACE            &lt 1 BACKSPACE    &lt 2 RET  &lt 3 SPACE       &lt 5 DELETE
+&kp ESCAPE  &kp Q                 &kp W                &kp E                    &kp R                  &kp T              &kp Y            &kp U             &kp I                    &kp O                &kp P                         &kp MINUS
+&kp TAB     &homerow LEFT_META A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow LEFT_SHIFT F  &kp G              &kp H            &homerow LSHFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_META SEMICOLON  &m_quote
+&kp LCTRL   &kp Z                 &kp X                &kp C                    &kp V                  &kp B              &kp N            &kp M             &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
+                                                       &lt 4 ESCAPE             &lt 3 SPACE            &lt 1 BACKSPACE    &lt 2 BACKSPACE  &lt 3 SPACE       &lt 5 DELETE
             >;
         };
 
@@ -188,10 +195,10 @@
 
         ACCENTS {
             bindings = <
-&a_crase  &m_acaret                 &m_ecaret                &trans                       &m_ocaret                  &trans       &trans     &m_ocaret             &trans                       &m_ecaret                &m_acaret                 &trans
-&trans    &homerow LEFT_META RA(A)  &homerow LEFT_ALT RA(E)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(U)  &homerow LSHFT RA(O)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(E)  &homerow LEFT_META RA(A)  &trans
-&trans    &m_atilde                 &trans                   &kp RA(COMMA)                &m_otilde                  &trans       &trans     &m_otilde             &kp RA(COMMA)                &m_quote                 &m_atilde                 &trans
-                                                             &trans                       &trans                     &trans       &trans     &trans                &trans
+&trans  &m_acaret  &trans                   &m_ecaret                    &m_ocaret                  &trans       &m_ecaret  &trans                &trans                       &m_ocaret                &m_acaret  &trans
+&trans  &a_accent  &homerow LEFT_ALT RA(I)  &homerow LEFT_CONTROL RA(E)  &homerow LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(E)  &homerow LSHFT RA(U)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(O)  &a_accent  &trans
+&trans  &m_atilde  &trans                   &kp RA(COMMA)                &m_otilde                  &trans       &trans     &trans                &kp RA(COMMA)                &m_otilde                &m_atilde  &trans
+                                            &trans                       &trans                     &trans       &trans     &trans                &trans
             >;
         };
 
