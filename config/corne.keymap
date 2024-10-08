@@ -57,8 +57,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <120>;
         };
 
         a_crase: a_crase {
