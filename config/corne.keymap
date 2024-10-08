@@ -23,16 +23,6 @@
             key-positions = <16 15>;
         };
 
-        acc1 {
-            bindings = <&lt 3 RA(COMMA)>;
-            key-positions = <4 3>;
-        };
-
-        acc2 {
-            bindings = <&lt 3 RA(COMMA)>;
-            key-positions = <7 8>;
-        };
-
         delword {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <41 38>;
@@ -43,9 +33,9 @@
             key-positions = <38 39>;
         };
 
-        l6 {
-            bindings = <&mo 6>;
-            key-positions = <36 41>;
+        layer_fun {
+            bindings = <&mo 5>;
+            key-positions = <36 37>;
         };
     };
 
@@ -75,17 +65,6 @@
             label = "A_ACCENT";
             #binding-cells = <0>;
             bindings = <&kp RA(A)>, <&a_crase>;
-        };
-
-        SPACE_LAYER: SPACE_LAYER {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_LAYER";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            flavor = "tap-preferred";
         };
 
         homerow_shift: homerow_shift {
@@ -194,7 +173,7 @@
 &kp ESCAPE  &kp Q                 &kp W                &kp E                    &kp R                        &kp T              &kp Y            &kp U                   &kp I                    &kp O                &kp P                         &kp MINUS
 &kp TAB     &homerow LEFT_META A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow_shift LEFT_SHIFT F  &kp G              &kp H            &homerow_shift LSHFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_META SEMICOLON  &m_quote
 &kp LCTRL   &kp Z                 &kp X                &kp C                    &kp V                        &kp B              &kp N            &kp M                   &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
-                                                       &lt 4 ESCAPE             &SPACE_LAYER 3 SPACE         &lt 1 BACKSPACE    &lt 2 BACKSPACE  &SPACE_LAYER 3 SPACE    &lt 5 DELETE
+                                                       &lt 4 ESCAPE             &lt 2 SPACE                  &lt 1 BACKSPACE    &lt 5 BACKSPACE  &lt 3 SPACE             &lt 6 DELETE
             >;
         };
 
