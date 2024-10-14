@@ -208,7 +208,7 @@
             bindings = <
 &trans         &kp LA(F4)     &kp F11        &kp LC(W)        &kp LC(T)    &kp UP_ARROW    &trans  &trans          &trans          &trans        &trans           &trans
 &trans         &kp LEFT_META  &kp LS(LG(S))  &kp LC(LS(TAB))  &kp LC(TAB)  &kp F5          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&kp LA(LC(T))  &kp BACKSPACE  &kp LG(E)      &kp K_COPY       &kp K_PASTE  &kp DOWN        &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+&kp LA(LC(T))  &kp BACKSPACE  &kp LG(E)      &kp LC(C)        &kp LC(V)    &kp DOWN        &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
                                              &trans           &trans       &trans          &trans  &trans          &trans
             >;
         };
