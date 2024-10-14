@@ -197,9 +197,9 @@
 
         ACCENTS {
             bindings = <
-&trans  &m_acaret  &trans                   &m_ecaret                    &m_ocaret                  &trans       &m_ecaret  &trans                &trans                       &m_ocaret                &m_acaret  &trans
-&trans  &a_accent  &homerow LEFT_ALT RA(I)  &homerow LEFT_CONTROL RA(E)  &homerow LEFT_SHIFT RA(O)  &kp RA(U)    &kp RA(E)  &homerow LSHFT RA(U)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(O)  &a_accent  &trans
-&trans  &m_atilde  &trans                   &kp RA(COMMA)                &m_otilde                  &trans       &trans     &trans                &kp RA(COMMA)                &m_otilde                &m_atilde  &trans
+&trans  &m_acaret  &m_ocaret                &m_ecaret                    &trans                     &trans       &m_ecaret  &trans                &trans                       &m_ocaret                &m_acaret  &trans
+&trans  &a_accent  &homerow LEFT_ALT RA(O)  &homerow LEFT_CONTROL RA(E)  &homerow LEFT_SHIFT RA(U)  &kp RA(I)    &kp RA(E)  &homerow LSHFT RA(U)  &homerow LEFT_CONTROL RA(I)  &homerow LEFT_ALT RA(O)  &a_accent  &trans
+&trans  &m_atilde  &m_otilde                &kp RA(COMMA)                &trans                     &trans       &trans     &trans                &kp RA(COMMA)                &m_otilde                &m_atilde  &trans
                                             &trans                       &trans                     &trans       &trans     &trans                &trans
             >;
         };
