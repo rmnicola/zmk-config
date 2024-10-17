@@ -206,10 +206,10 @@
 
         NAV {
             bindings = <
-&trans         &kp LA(F4)     &kp F11        &kp LC(LS(W))  &kp LC(LS(T))  &kp UP_ARROW    &trans  &trans          &trans          &trans        &trans           &trans
-&trans         &kp LEFT_META  &kp LS(LG(S))  &kp LG(H)      &kp LG(L)      &kp F5          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&kp LA(LC(T))  &kp BACKSPACE  &kp LC(X)      &kp LC(C)      &kp LC(V)      &kp DOWN        &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
-                                             &trans         &trans         &trans          &trans  &trans          &trans
+&kp LG(LS(S))          &kp LA(F4)     &kp F11    &kp LC(LS(W))  &kp LC(LS(T))  &kp UP_ARROW    &trans  &trans          &trans          &trans        &trans           &trans
+&trans                 &kp LEFT_META  &kp LG(E)  &kp LG(H)      &kp LG(L)      &kp F5          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&kp LA(LC(BACKSPACE))  &kp LC(LA(T))  &kp LC(X)  &kp LC(C)      &kp LC(V)      &kp DOWN        &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+                                                 &trans         &trans         &trans          &trans  &trans          &trans
             >;
         };
 
