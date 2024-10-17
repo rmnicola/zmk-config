@@ -170,10 +170,10 @@
 
         BASE {
             bindings = <
-&kp TAB     &kp Q                 &kp W                &kp E                    &kp R                        &kp T          &kp Y            &kp U                   &kp I                    &kp O                &kp P                         &kp MINUS
-&kp ESCAPE  &homerow LEFT_META A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow_shift LEFT_SHIFT F  &kp G          &kp H            &homerow_shift LSHFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_META SEMICOLON  &m_quote
-&kp LCTRL   &kp Z                 &kp X                &kp C                    &kp V                        &kp B          &kp N            &kp M                   &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
-                                                       &lt 4 ESCAPE             &lt 1 SPACE                  &lt 2 ENTER    &lt 5 BACKSPACE  &lt 3 SPACE             &lt 6 DELETE
+&kp TAB     &kp Q                 &kp W                &kp E                    &kp R                        &kp T              &kp Y      &kp U                   &kp I                    &kp O                &kp P                         &kp MINUS
+&kp ESCAPE  &homerow LEFT_META A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow_shift LEFT_SHIFT F  &kp G              &kp H      &homerow_shift LSHFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_META SEMICOLON  &m_quote
+&kp LCTRL   &kp Z                 &kp X                &kp C                    &kp V                        &kp B              &kp N      &kp M                   &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
+                                                       &lt 4 ESCAPE             &lt 1 SPACE                  &lt 2 BACKSPACE    &lt 5 RET  &lt 3 SPACE             &lt 6 DELETE
             >;
         };
 
@@ -206,10 +206,10 @@
 
         NAV {
             bindings = <
-&trans         &kp LA(F4)     &kp F11        &kp LC(W)        &kp LC(T)    &kp UP_ARROW    &trans  &trans          &trans          &trans        &trans           &trans
-&trans         &kp LEFT_META  &kp LS(LG(S))  &kp LC(LS(TAB))  &kp LC(TAB)  &kp F5          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&kp LA(LC(T))  &kp BACKSPACE  &kp LG(E)      &kp LC(C)        &kp LC(V)    &kp DOWN        &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
-                                             &trans           &trans       &trans          &trans  &trans          &trans
+&trans         &kp LA(F4)     &kp F11        &kp LC(LS(W))  &kp LC(LS(T))  &kp UP_ARROW    &trans  &trans          &trans          &trans        &trans           &trans
+&trans         &kp LEFT_META  &kp LS(LG(S))  &kp LG(H)      &kp LG(L)      &kp F5          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&kp LA(LC(T))  &kp BACKSPACE  &kp LC(X)      &kp LC(C)      &kp LC(V)      &kp DOWN        &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+                                             &trans         &trans         &trans          &trans  &trans          &trans
             >;
         };
 
