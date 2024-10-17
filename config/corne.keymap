@@ -179,9 +179,9 @@
 
         NUM {
             bindings = <
-&kp BACKSPACE  &kp COMMA              &kp N7                      &kp N8                    &kp N9                        &kp ASTRK    &kp ASTERISK  &kp N7                   &kp N8                          &kp N9                      &kp K_COPY              &trans
-&trans         &homerow LEFT_META N0  &homerow LEFT_ALT NUMBER_4  &homerow LEFT_CONTROL N5  &homerow LEFT_SHIFT NUMBER_6  &kp MINUS    &kp MINUS     &homerow LSHFT NUMBER_1  &homerow LEFT_CONTROL NUMBER_2  &homerow LEFT_ALT NUMBER_3  &homerow LEFT_META DOT  &trans
-&trans         &kp N0                 &kp N1                      &kp N2                    &kp N3                        &kp EQUAL    &kp EQUAL     &kp N1                   &kp N2                          &kp N3                      &kp K_PASTE             &trans
+&kp BACKSPACE  &kp COMMA              &kp N7                      &kp N8                    &kp N9                        &kp ASTRK    &kp ASTERISK  &kp N7                   &kp N8                    &kp N9                      &kp K_COPY              &trans
+&trans         &homerow LEFT_META N0  &homerow LEFT_ALT NUMBER_4  &homerow LEFT_CONTROL N5  &homerow LEFT_SHIFT NUMBER_6  &kp MINUS    &kp MINUS     &homerow LSHFT NUMBER_4  &homerow LEFT_CONTROL N5  &homerow LEFT_ALT NUMBER_6  &homerow LEFT_META DOT  &trans
+&trans         &kp N0                 &kp N1                      &kp N2                    &kp N3                        &kp EQUAL    &kp EQUAL     &kp N1                   &kp N2                    &kp N3                      &kp K_PASTE             &trans
                                                                   &trans                    &trans                        &trans       &kp N0        &kp DOT                  &kp BACKSLASH
             >;
         };
