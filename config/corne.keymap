@@ -173,25 +173,25 @@
 &kp TAB     &kp Q                 &kp W                &kp E                    &kp R                        &kp T              &kp Y      &kp U                   &kp I                    &kp O                &kp P                         &kp MINUS
 &kp ESCAPE  &homerow LEFT_META A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow_shift LEFT_SHIFT F  &kp G              &kp H      &homerow_shift LSHFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_META SEMICOLON  &m_quote
 &kp LCTRL   &kp Z                 &kp X                &kp C                    &kp V                        &kp B              &kp N      &kp M                   &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
-                                                       &lt 4 ESCAPE             &lt 2 SPACE                  &lt 1 BACKSPACE    &lt 5 RET  &lt 3 SPACE             &lt 6 DELETE
+                                                       &lt 4 ESCAPE             &lt 1 SPACE                  &lt 2 BACKSPACE    &lt 5 RET  &lt 3 SPACE             &lt 6 DELETE
             >;
         };
 
         NUM {
             bindings = <
-&trans  &kp BACKSPACE          &kp N7                      &kp N8                    &kp N9                        &kp DOT      &kp DOT    &kp N7  &kp N8  &kp N9  &kp BSPC  &kp MINUS
-&trans  &homerow LEFT_META N0  &homerow LEFT_ALT NUMBER_4  &homerow LEFT_CONTROL N5  &homerow LEFT_SHIFT NUMBER_6  &kp COMMA    &kp COMMA  &kp N4  &kp N5  &kp N6  &kp N0    &kp EQUAL
-&trans  &kp N0                 &kp N1                      &kp N2                    &kp N3                        &kp RET      &kp ENTER  &kp N1  &kp N2  &kp N3  &kp N0    &kp PLUS
-                                                           &trans                    &trans                        &trans       &trans     &trans  &trans
+&trans  &kp BACKSPACE          &kp N7                      &kp N8                    &kp N9                              &kp DOT      &kp DOT    &kp N7  &kp N8  &kp N9  &kp BSPC  &kp MINUS
+&trans  &homerow LEFT_META N0  &homerow LEFT_ALT NUMBER_4  &homerow LEFT_CONTROL N5  &homerow_shift LEFT_SHIFT NUMBER_6  &kp COMMA    &kp COMMA  &kp N4  &kp N5  &kp N6  &kp N0    &kp EQUAL
+&trans  &kp N0                 &kp N1                      &kp N2                    &kp N3                              &kp RET      &kp ENTER  &kp N1  &kp N2  &kp N3  &kp N0    &kp PLUS
+                                                           &trans                    &trans                              &trans       &trans     &trans  &trans
             >;
         };
 
         SYM {
             bindings = <
-&m_tilde  &kp N1                   &kp N2                          &kp N3                            &kp N4                                &kp N5           &kp N6     &kp N7                                 &kp N8                             &kp N9                           &kp N0  &trans
-&m_grave  &homerow LEFT_META EXCL  &homerow LEFT_ALT LEFT_BRACKET  &homerow LEFT_CONTROL LEFT_BRACE  &homerow LEFT_SHIFT LEFT_PARENTHESIS  &kp PLUS         &kp EQUAL  &homerow LEFT_SHIFT RIGHT_PARENTHESIS  &homerow LEFT_CONTROL RIGHT_BRACE  &homerow LEFT_ALT RIGHT_BRACKET  &trans  &trans
-&m_caret  &kp AT                   &kp DOLLAR                      &kp HASH                          &kp ASTERISK                          &kp BACKSLASH    &kp PIPE   &kp AMPERSAND                          &trans                             &trans                           &trans  &trans
-                                                                   &trans                            &trans                                &trans           &trans     &trans                                 &trans
+&m_tilde  &kp N1                   &kp N2                          &kp N3                            &kp N4                                      &kp N5           &kp N6     &kp N7                                       &kp N8                             &kp N9                           &kp N0  &trans
+&m_grave  &homerow LEFT_META EXCL  &homerow LEFT_ALT LEFT_BRACKET  &homerow LEFT_CONTROL LEFT_BRACE  &homerow_shift LEFT_SHIFT LEFT_PARENTHESIS  &kp PLUS         &kp EQUAL  &homerow_shift LEFT_SHIFT RIGHT_PARENTHESIS  &homerow LEFT_CONTROL RIGHT_BRACE  &homerow LEFT_ALT RIGHT_BRACKET  &trans  &trans
+&m_caret  &kp AT                   &kp DOLLAR                      &kp HASH                          &kp ASTERISK                                &kp BACKSLASH    &kp PIPE   &kp AMPERSAND                                &trans                             &trans                           &trans  &trans
+                                                                   &trans                            &trans                                      &trans           &trans     &trans                                       &trans
             >;
         };
 
