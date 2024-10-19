@@ -188,9 +188,9 @@
 
         SYM {
             bindings = <
-&trans  &m_tilde                 &m_grave              &kp PERCENT                 &kp LEFT_BRACE                        &kp PLUS         &kp EQUAL         &kp RIGHT_BRACE                   &m_caret                     &kp PIPE                     &kp BACKSLASH  &trans
+&trans  &m_tilde                 &m_grave              &kp PERCENT                 &kp LEFT_BRACE                        &kp ASTRK        &kp PLUS          &kp RIGHT_BRACE                   &m_caret                     &kp PIPE                     &kp BACKSLASH  &kp EQUAL
 &trans  &homerow LEFT_META EXCL  &homerow LEFT_ALT AT  &homerow LEFT_CONTROL HASH  &homerow LEFT_SHIFT LEFT_PARENTHESIS  &kp LESS_THAN    &kp GREATER_THAN  &homerow LSHFT RIGHT_PARENTHESIS  &homerow LEFT_CONTROL ASTRK  &homerow LEFT_ALT AMPERSAND  &trans         &trans
-&trans  &trans                   &trans                &kp DOLLAR                  &kp LEFT_BRACKET                      &kp MINUS        &kp UNDER         &kp RIGHT_BRACKET                 &trans                       &trans                       &trans         &trans
+&trans  &trans                   &trans                &kp DOLLAR                  &kp LEFT_BRACKET                      &kp UNDER        &kp MINUS         &kp RIGHT_BRACKET                 &trans                       &trans                       &trans         &trans
                                                        &trans                      &trans                                &trans           &trans            &trans                            &trans
             >;
         };
