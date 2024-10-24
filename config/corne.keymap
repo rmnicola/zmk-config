@@ -30,12 +30,7 @@
 
         shiftword {
             bindings = <&caps_word>;
-            key-positions = <38 39>;
-        };
-
-        layer_fun {
-            bindings = <&mo 5>;
-            key-positions = <36 37>;
+            key-positions = <19 16>;
         };
     };
 
@@ -170,10 +165,10 @@
 
         BASE {
             bindings = <
-&kp TAB     &kp Q                 &kp W                &kp E                    &kp R                        &kp T              &kp Y      &kp U                   &kp I                    &kp O                &kp P                         &kp MINUS
-&kp ESCAPE  &homerow LEFT_META A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow_shift LEFT_SHIFT F  &kp G              &kp H      &homerow_shift LSHFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_META SEMICOLON  &m_quote
-&kp LCTRL   &kp Z                 &kp X                &kp C                    &kp V                        &kp B              &kp N      &kp M                   &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
-                                                       &lt 4 ESCAPE             &lt 1 SPACE                  &lt 2 BACKSPACE    &lt 5 RET  &lt 3 SPACE             &lt 6 DELETE
+&lt 5 TAB     &kp Q                 &kp W                &kp E                    &kp R                        &kp T            &kp Y               &kp U                   &kp I                    &kp O                &kp P                         &kp MINUS
+&lt 6 ESCAPE  &homerow LEFT_META A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow_shift LEFT_SHIFT F  &kp G            &kp H               &homerow_shift LSHFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_META SEMICOLON  &m_quote
+&tog 1        &kp Z                 &kp X                &kp C                    &kp V                        &kp B            &kp N               &kp M                   &kp COMMA                &kp DOT              &kp FSLH                      &kp RET
+                                                         &lt 4 TAB                &lt 2 ESCAPE                 &kp BACKSPACE    &mt LEFT_SHIFT RET  &lt 3 SPACE             &kp DELETE
             >;
         };
 
@@ -190,7 +185,7 @@
             bindings = <
 &m_tilde  &kp N1                   &kp N2                          &kp N3                            &kp N4                                      &kp N5           &kp N6     &kp N7                                       &kp N8                             &kp N9                           &kp N0  &trans
 &m_grave  &homerow LEFT_META EXCL  &homerow LEFT_ALT LEFT_BRACKET  &homerow LEFT_CONTROL LEFT_BRACE  &homerow_shift LEFT_SHIFT LEFT_PARENTHESIS  &kp PLUS         &kp EQUAL  &homerow_shift LEFT_SHIFT RIGHT_PARENTHESIS  &homerow LEFT_CONTROL RIGHT_BRACE  &homerow LEFT_ALT RIGHT_BRACKET  &trans  &trans
-&m_caret  &kp AT                   &kp DOLLAR                      &kp HASH                          &kp ASTERISK                                &kp BACKSLASH    &kp PIPE   &kp AMPERSAND                                &trans                             &trans                           &trans  &trans
+&m_caret  &kp AT                   &kp PERCENT                     &kp HASH                          &kp ASTERISK                                &kp BACKSLASH    &kp PIPE   &kp AMPERSAND                                &trans                             &trans                           &trans  &trans
                                                                    &trans                            &trans                                      &trans           &trans     &trans                                       &trans
             >;
         };
@@ -228,15 +223,6 @@
 &none       &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &out OUT_USB    &none  &none  &none  &none  &none  &none
 &none       &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
                                         &none         &none         &none           &none  &none  &none
-            >;
-        };
-
-        NUM_ALT {
-            bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
