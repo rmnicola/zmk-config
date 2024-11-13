@@ -214,9 +214,9 @@
 
         NUM {
             bindings = <
-&trans  &kp BACKSPACE  &kp N7        &kp N8  &kp N9        &kp DOT      &kp DOT    &kp N7  &kp N8  &kp N9  &kp BSPC  &kp MINUS
+&trans  &kp BACKSPACE  &kp N1        &kp N2  &kp N3        &kp DOT      &kp DOT    &kp N1  &kp N2  &kp N3  &kp BSPC  &kp MINUS
 &trans  &kp N0         &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp COMMA    &kp COMMA  &kp N4  &kp N5  &kp N6  &kp N0    &kp EQUAL
-&trans  &kp N0         &kp N1        &kp N2  &kp N3        &kp RET      &kp ENTER  &kp N1  &kp N2  &kp N3  &kp N0    &kp PLUS
+&trans  &kp N0         &kp N7        &kp N8  &kp N9        &kp RET      &kp ENTER  &kp N7  &kp N8  &kp N9  &kp N0    &kp PLUS
                                      &trans  &trans        &trans       &trans     &trans  &trans
             >;
         };
