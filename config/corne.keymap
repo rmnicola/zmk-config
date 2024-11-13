@@ -205,10 +205,10 @@
 
         BASE {
             bindings = <
-&lt 5 TAB     &kp Q  &kp W  &kp E      &kp R         &kp T            &kp Y               &kp U        &kp I       &kp O    &kp P          &kp MINUS
-&lt 6 ESCAPE  &kp A  &kp S  &kp D      &kp F         &kp G            &kp H               &kp J        &kp K       &kp L    &kp SEMICOLON  &m_quote
-&tog 1        &kp Z  &kp X  &kp C      &kp V         &kp B            &kp N               &kp M        &kp COMMA   &kp DOT  &kp FSLH       &kp RET
-                            &lt 4 TAB  &lt 2 ESCAPE  &kp BACKSPACE    &mt LEFT_SHIFT RET  &lt 3 SPACE  &kp DELETE
+&lt 5 TAB     &kp Q  &kp W  &kp E      &kp R        &kp T                       &kp Y               &kp U        &kp I       &kp O    &kp P          &kp MINUS
+&lt 6 ESCAPE  &kp A  &kp S  &kp D      &kp F        &kp G                       &kp H               &kp J        &kp K       &kp L    &kp SEMICOLON  &m_quote
+&tog 1        &kp Z  &kp X  &kp C      &kp V        &kp B                       &kp N               &kp M        &kp COMMA   &kp DOT  &kp FSLH       &kp RET
+                            &lt 4 TAB  &lt 2 SPACE  &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT RET  &lt 3 SPACE  &kp DELETE
             >;
         };
 
