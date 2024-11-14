@@ -30,7 +30,7 @@
 
         shiftword {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <19 16>;
+            key-positions = <39 38>;
         };
 
         shift_left {
@@ -241,10 +241,10 @@
 
         NAV {
             bindings = <
-&none  &none  &none      &none      &kp F11        &kp LG(LS(L))    &trans  &trans          &trans          &trans        &trans           &trans
-&none  &none  &none      &none      &kp LG(LS(S))  &none            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&none  &none  &kp LC(X)  &kp LC(C)  &kp LC(V)      &none            &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
-                         &trans     &trans         &trans           &trans  &trans          &trans
+&none  &none       &none       &kp C_VOLUME_UP    &kp F11        &kp LG(LS(L))    &trans  &trans          &trans          &trans        &trans           &trans
+&none  &kp LA(F4)  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp LG(LS(S))  &none            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&none  &none       &kp LC(X)   &kp LC(C)          &kp LC(V)      &none            &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+                               &trans             &trans         &trans           &trans  &trans          &trans
             >;
         };
 
