@@ -44,6 +44,35 @@
             tapping-term-ms = <180>;
             flavor = "tap-preferred";
         };
+
+        otilcar: otilcar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "OTILCAR";
+            bindings = <&m_ocaret>, <&m_otilde>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+        };
+
+        atilcar: atilcar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ATILCAR";
+            bindings = <&m_acaret>, <&m_atilde>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+        };
+
+        atilcarcra: atilcarcra {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ATILCARCRA";
+            #binding-cells = <0>;
+            bindings = <&atilcar 0 0>, <&m_crase>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     macros {
@@ -137,10 +166,10 @@
 
         BASE {
             bindings = <
-&mt LEFT_WIN TAB       &kp Q            &kp W  &kp E            &kp R                        &kp T                       &kp Y      &accent RA(U) U        &accent RA(I) I          &accent RA(O) O           &kp P          &kp MINUS
-&mt LEFT_SHIFT ESCAPE  &accent RA(A) A  &kp S  &kp D            &homerow_shift LEFT_SHIFT F  &kp G                       &kp H      &homerow LEFT_SHIFT J  &homerow LCTRL K         &homerow LEFT_GUI L       &kp SEMICOLON  &m_quote
-&tog 1                 &kp Z            &kp X  &accent RA(C) C  &kp V                        &kp B                       &kp N      &lt 1 M                &accent RA(COMMA) COMMA  &homerow LEFT_ALT PERIOD  &kp FSLH       &kp CAPSLOCK
-                                               &lt 4 TAB        &lt 2 SPACE                  &mt LEFT_SHIFT BACKSPACE    &lt 4 RET  &lt 3 SPACE            &lt 5 DELETE
+&lt 6 TAB            &kp Q            &kp W  &kp E            &kp R                        &kp T                       &kp Y      &accent RA(U) U        &accent RA(I) I          &accent RA(O) O           &kp P          &kp MINUS
+&mt LEFT_GUI ESCAPE  &accent RA(A) A  &kp S  &kp D            &homerow_shift LEFT_SHIFT F  &kp G                       &kp H      &homerow LEFT_SHIFT J  &homerow LCTRL K         &homerow LEFT_GUI L       &kp SEMICOLON  &m_quote
+&tog 1               &kp Z            &kp X  &accent RA(C) C  &kp V                        &kp B                       &kp N      &lt 1 M                &accent RA(COMMA) COMMA  &homerow LEFT_ALT PERIOD  &kp FSLH       &kp CAPSLOCK
+                                             &lt 4 TAB        &lt 2 SPACE                  &mt LEFT_SHIFT BACKSPACE    &lt 4 RET  &lt 3 SPACE            &lt 5 DELETE
             >;
         };
 
@@ -164,10 +193,10 @@
 
         ACCENTS {
             bindings = <
-&trans  &m_acaret  &m_ocaret  &m_ecaret      &trans     &trans       &trans     &trans     &m_ecaret      &m_ocaret  &m_acaret  &trans
-&trans  &none      &kp RA(O)  &kp RA(E)      &kp RA(U)  &kp RA(I)    &kp RA(I)  &kp RA(U)  &kp RA(E)      &kp RA(O)  &none      &trans
-&trans  &m_atilde  &m_otilde  &kp RA(COMMA)  &trans     &trans       &trans     &trans     &kp RA(COMMA)  &m_otilde  &m_atilde  &trans
-                              &trans         &trans     &trans       &trans     &trans     &trans
+&trans  &trans       &trans  &m_ecaret      &trans  &trans    &trans  &trans  &trans         &m_ocaret  &trans  &trans
+&trans  &atilcarcra  &trans  &trans         &trans  &trans    &trans  &trans  &trans         &trans     &trans  &trans
+&trans  &trans       &trans  &kp RA(COMMA)  &trans  &trans    &trans  &trans  &kp RA(COMMA)  &trans     &trans  &trans
+                             &trans         &trans  &trans    &trans  &trans  &trans
             >;
         };
 
