@@ -10,69 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        esc_num {
-            bindings = <&kp ESCAPE>;
-            key-positions = <19 20>;
-        };
-
-        ret_num {
-            bindings = <&kp RET>;
-            key-positions = <16 15>;
-        };
-
-        delword {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <41 38>;
-        };
-
-        shiftword {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <39 38>;
-        };
-
-        shift_left {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <16 4>;
-        };
-
-        shift_right {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <19 7>;
-        };
-
-        ctrl_left {
-            bindings = <&kp RCTRL>;
-            key-positions = <3 15>;
-        };
-
-        ctrl_right {
-            bindings = <&kp RCTRL>;
-            key-positions = <8 20>;
-        };
-
-        alt_left {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <14 2>;
-        };
-
-        alt_right {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <9 21>;
-        };
-
-        super_left {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <1 13>;
-        };
-
-        super_right {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <10 22>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         homerow: homerow {
@@ -205,19 +143,19 @@
 
         BASE {
             bindings = <
-&lt 5 TAB     &kp Q  &kp W  &kp E      &kp R        &kp T                       &kp Y               &kp U        &kp I       &kp O    &kp P          &kp MINUS
-&lt 6 ESCAPE  &kp A  &kp S  &kp D      &kp F        &kp G                       &kp H               &kp J        &kp K       &kp L    &kp SEMICOLON  &m_quote
-&tog 1        &kp Z  &kp X  &kp C      &kp V        &kp B                       &kp N               &kp M        &kp COMMA   &kp DOT  &kp FSLH       &kp RET
-                            &lt 4 TAB  &lt 2 SPACE  &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT RET  &lt 3 SPACE  &kp DELETE
+&lt 5 TAB     &kp Q  &kp W  &kp E      &kp R             &kp T                       &kp Y               &kp U        &kp I       &kp O    &kp P          &kp MINUS
+&lt 6 ESCAPE  &kp A  &kp S  &kp D      &mt LEFT_SHIFT F  &kp G                       &kp H               &kp J        &kp K       &kp L    &kp SEMICOLON  &m_quote
+&tog 1        &kp Z  &kp X  &kp C      &kp V             &kp B                       &kp N               &kp M        &kp COMMA   &kp DOT  &kp FSLH       &kp RET
+                            &lt 4 TAB  &lt 2 SPACE       &mt LEFT_SHIFT BACKSPACE    &mt LEFT_SHIFT RET  &lt 3 SPACE  &kp DELETE
             >;
         };
 
         NUM {
             bindings = <
-&trans  &kp BACKSPACE  &kp N1        &kp N2  &kp N3        &kp DOT      &kp DOT    &kp N1  &kp N2  &kp N3  &kp BSPC  &kp MINUS
-&trans  &kp N0         &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp COMMA    &kp COMMA  &kp N4  &kp N5  &kp N6  &kp N0    &kp EQUAL
-&trans  &kp N0         &kp N7        &kp N8  &kp N9        &kp RET      &kp ENTER  &kp N7  &kp N8  &kp N9  &kp N0    &kp PLUS
-                                     &trans  &trans        &trans       &trans     &trans  &trans
+&trans  &kp MINUS  &kp N1        &kp N2  &kp N3        &kp PLUS        &kp DOT    &kp N1  &kp N2  &kp N3  &kp BSPC  &kp MINUS
+&trans  &kp SLASH  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp ASTERISK    &kp COMMA  &kp N4  &kp N5  &kp N6  &kp N0    &kp EQUAL
+&trans  &kp DOT    &kp N7        &kp N8  &kp N9        &kp COMMA       &kp ENTER  &kp N7  &kp N8  &kp N9  &kp N0    &kp PLUS
+                                 &kp N0  &trans        &trans          &trans     &trans  &trans
             >;
         };
 
