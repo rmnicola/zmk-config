@@ -166,7 +166,7 @@
 
         BASE {
             bindings = <
-&lt 6 TAB            &kp Q            &kp W  &kp E            &kp R                        &kp T                       &kp Y      &accent RA(U) U        &accent RA(I) I          &accent RA(O) O           &kp P          &kp MINUS
+&lt 6 TAB            &kp Q            &kp W  &accent RA(E) E  &kp R                        &kp T                       &kp Y      &accent RA(U) U        &accent RA(I) I          &accent RA(O) O           &kp P          &kp MINUS
 &mt LEFT_GUI ESCAPE  &accent RA(A) A  &kp S  &kp D            &homerow_shift LEFT_SHIFT F  &kp G                       &kp H      &homerow LEFT_SHIFT J  &homerow LCTRL K         &homerow LEFT_GUI L       &kp SEMICOLON  &m_quote
 &tog 1               &kp Z            &kp X  &accent RA(C) C  &kp V                        &kp B                       &kp N      &lt 1 M                &accent RA(COMMA) COMMA  &homerow LEFT_ALT PERIOD  &kp FSLH       &kp CAPSLOCK
                                              &lt 4 TAB        &lt 2 SPACE                  &mt LEFT_SHIFT BACKSPACE    &lt 4 RET  &lt 3 SPACE            &lt 5 DELETE
