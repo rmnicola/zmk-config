@@ -10,7 +10,34 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        df_enter {
+            bindings = <&kp RET>;
+            key-positions = <15 16>;
+        };
+
+        jk_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <19 20>;
+        };
+
+        fj_caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <16 19>;
+        };
+
+        space {
+            bindings = <&kp SPACE>;
+            key-positions = <37 40>;
+        };
+
+        bk_word {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <38 41>;
+        };
+    };
 
     behaviors {
         homerow: homerow {
